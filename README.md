@@ -1,15 +1,19 @@
-# Empower OT
+# DCS Construction
 
-Vue 3 + Vite + TypeScript rebuild of the Empower OT marketing site, converted
-from a single static HTML mock into a component-driven, data-driven SPA.
+Vue 3 + Vite + TypeScript website for DCS Construction, an industrial and
+commercial construction brand.
 
-## Quick start
+## Quick Start
 
 ```bash
 npm install
 npm run dev
+npm run build
 ```
 
-See `docs/composer-plan.md` for how the original HTML sections map to
-components, `docs/linear-design.md` for the design token reference, and
-`docs/template-usage.md` for day-to-day editing instructions.
+## Branch Model
+
+- `main`: editable source code, content, public assets, and configuration.
+- `gh-pages`: generated static website output published from `dist/`.
+
+Run `bash deploy.sh` to build and publish the generated site to GitHub Pages.
