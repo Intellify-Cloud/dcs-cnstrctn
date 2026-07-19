@@ -1,0 +1,173 @@
+{
+  "brand": {
+    "name": "Neha Jivan",
+    "tagline": "Little Hands, Big Futures",
+    "subtitle": "Occupational Therapy",
+    "phone": "072 000 0000",
+    "phoneHref": "tel:+27720000000"
+  },
+  "nav": [
+    { "label": "Services", "href": "#services" },
+    { "label": "Our Approach", "href": "#approach" },
+    { "label": "About Us", "href": "#about" }
+  ],
+  "hero": {
+    "image": "/images/hero/hero-neha-jivan_new.png",
+    "imageAlt": "Neha Jivan, paediatric occupational therapist, working with a child in a warm, play-based therapy space."
+  },
+  "disciplines": [
+    {
+      "size": "large",
+      "image": "/images/sections/play.jpg",
+      "imageAlt": "A paediatric occupational therapist and parent supporting a young child stacking blocks in a colourful play-therapy room.",
+      "eyebrow": "Paediatric OT",
+      "title": "Building Blocks of Play",
+      "description": "Supporting the small skills that grow into big independence, one playful session at a time."
+    },
+    {
+      "size": "small",
+      "icon": "hand_gesture",
+      "title": "Fine Motor Skills",
+      "description": "Lorem ipsum — gentle hand and finger activities that help little hands learn to grip, draw, and do.",
+      "cta": "Learn more"
+    },
+    {
+      "size": "small",
+      "icon": "psychology",
+      "title": "Sensory Care",
+      "description": "Lorem ipsum — simple strategies to help children feel calm, focused, and ready to take part in the day.",
+      "cta": "Learn more"
+    },
+    {
+      "size": "medium",
+      "video": "/images/sections/video.mp4",
+      "image": "/images/sections/play.jpg",
+      "imageAlt": "A warm, child-friendly therapy space with toys and soft natural light.",
+      "title": "Everyday Confidence",
+      "description": "Turning daily routines into small wins that build confidence."
+    }
+  ],
+  "services": [
+    {
+      "image": "/images/hero/hero-neha-jivan.png",
+      "imageAlt": "A paediatric occupational therapist engaging warmly with a child during a therapy activity.",
+      "title": "Paediatric OT Assessment",
+      "description": "A gentle, play-based assessment to understand your child's strengths, challenges, routines, and developmental goals.",
+      "href": "#contact"
+    },
+    {
+      "image": "/images/sections/play.jpg",
+      "imageAlt": "A child stacking blocks with therapeutic support in a warm play space.",
+      "title": "Fine Motor & Handwriting",
+      "description": "Practical support for grip, hand strength, coordination, pencil control, cutting, drawing, and early school readiness.",
+      "href": "#contact"
+    },
+    {
+      "image": "/images/hero/hero-2.png",
+      "imageAlt": "A child-focused occupational therapy setting with playful developmental activities.",
+      "title": "Sensory Processing Support",
+      "description": "Strategies that help children regulate big feelings, manage sensory input, and participate more calmly at home and school.",
+      "href": "#contact"
+    },
+    {
+      "image": "/images/hero/hero.png",
+      "imageAlt": "A paediatric occupational therapy moment focused on confidence and independence.",
+      "title": "Daily Living Skills",
+      "description": "Building independence with dressing, feeding, grooming, play routines, classroom tasks, and everyday participation.",
+      "href": "#contact"
+    }
+  ],
+  "visionary": {
+    "eyebrow": "Meet Neha",
+    "name": "Neha Jivan, OT (Hons)",
+    "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuAMJHlSEKtQs70fnwpjlyZ6np9T64YwBj4ffbD2Kzy2mqdTcidEahz1T2rqSvSwRyGtBd2OMy1oSxMmiwQuYGmQu4dGurxA3oHfRAWhKJKHZyCiIQ1KXveJvi_JivhhBZ7vqg6FeMnS9jD4QK9KMVCFGfPafigy_lyyt7WWXqs0cG4XoanVrE3iAi8jogsO-g9RwjgjThpSaitzve_EkrQ13zUEN-O_2h7fnIw3lycXvabbZjdcoYKhEw",
+    "imageAlt": "A warm professional portrait of Neha Jivan, paediatric occupational therapist.",
+    "bio": "Neha Jivan is a resourceful Occupational Therapist with a Bachelor of Occupational Therapy Honours degree from UKZN. Her community service year at Cato Manor CHC opened the door to working with children from many different backgrounds, and it is there that her love for paediatric therapy deepened. She thrives on connecting with diverse people, cultures, and personalities, bringing strong communication, collaboration, and thoughtful organisation into every family's journey. Neha's work is grounded in curiosity and care: getting down to a child's level, meeting them through play, mapping out practical solutions when challenges arise, and using gentle trial and error to find what works best. She celebrates the small milestones because those brave little steps grow into confidence, independence, and lasting change. Currently completing the DIR/Floortime introductory course, she remains committed to life-long learning, critical thinking, and holistic care delivered with compassion, warmth, and steady motivation.",
+    "quote": "Great things are done by a series of small things brought together. In therapy, every tiny win matters.",
+    "stats": [
+      { "value": "UKZN", "label": "OT Honours Graduate" },
+      { "value": "Many", "label": "Communities Served" }
+    ]
+  },
+  "steps": [
+    {
+      "number": "01",
+      "icon": "clinical_notes",
+      "title": "Listen First",
+      "description": "We begin with a relaxed conversation about your child, your routines, your concerns, and the moments you would love to feel easier."
+    },
+    {
+      "number": "02",
+      "icon": "architecture",
+      "title": "Assess Through Play",
+      "description": "A gentle OT assessment helps us understand sensory needs, fine motor skills, coordination, confidence, and everyday independence."
+    },
+    {
+      "number": "03",
+      "icon": "model_training",
+      "title": "Build Tiny Wins",
+      "description": "Sessions turn therapy goals into playful activities that build skills step by step, without losing the warmth and fun children need."
+    },
+    {
+      "number": "04",
+      "icon": "verified",
+      "title": "Carry It Home",
+      "description": "You leave with practical strategies for home and school, with regular check-ins to celebrate progress and adjust the plan."
+    }
+  ],
+  "experience": {
+    "roles": [
+      {
+        "title": "Paediatric Occupational Therapist",
+        "organisation": "Tamaryn Hunter Occupational Therapy",
+        "type": "Full-time",
+        "period": "Jan 2025 - Present",
+        "location": "Durban, KwaZulu-Natal, South Africa",
+        "mode": "On-site",
+        "url": "https://www.tamot4kids.co.za/",
+        "summary": "Neha currently works within a dedicated paediatric occupational therapy practice, supporting children and families through assessment, treatment planning, parent collaboration, and playful therapeutic intervention.",
+        "highlights": ["Paediatric OT", "Family-centred care", "Developmental support"]
+      },
+      {
+        "title": "Community Service Occupational Therapist",
+        "organisation": "Cato Manor CHC, Department of Health South Africa",
+        "type": "Contract",
+        "period": "Jan 2024 - Dec 2024",
+        "location": "Durban, KwaZulu-Natal, South Africa",
+        "mode": "On-site",
+        "summary": "Her community service year offered rich exposure to children and families from diverse backgrounds, strengthening her clinical adaptability, community outreach experience, and commitment to holistic care.",
+        "highlights": ["Community outreach", "Reintegration", "Public health"]
+      }
+    ],
+    "education": [
+      {
+        "institution": "University of KwaZulu-Natal",
+        "qualification": "Bachelor of Occupational Therapy (Honours), Public Health",
+        "period": "Jan 2019 - Dec 2023",
+        "summary": "A professional foundation in client-centred care, health promotion, clinical reasoning, and purposeful occupation."
+      },
+      {
+        "institution": "Westville Girls' High School",
+        "qualification": "NSC Bachelor Pass",
+        "period": "Jan 2014 - Dec 2018",
+        "summary": "Distinctions in Dramatic Arts and Afrikaans, with involvement in Eco-club, Social Badminton, and the Hindu Student Association."
+      }
+    ]
+  },
+  "contact": {
+    "mapImage": "/images/sections/map-placeholder.png",
+    "mapImageAlt": "A stylized minimalist map of the therapy district rendered in neutral tones and soft teals.",
+    "address": "Lorem ipsum street, Durban, KwaZulu-Natal"
+  },
+  "footer": {
+    "description": "Lorem ipsum — paediatric occupational therapy that meets children where they are and helps them grow.",
+    "services": ["Fine Motor", "Sensory Care", "Play Skills", "Daily Living"],
+    "company": [
+      { "label": "Our Approach", "to": "/" },
+      { "label": "Research & Outcomes", "to": "/portfolio" },
+      { "label": "Contact Me", "to": "/contact" },
+      { "label": "Privacy Policy", "to": "/privacy" }
+    ],
+    "copyright": "© 2024 Neha Jivan. All rights reserved. Building the little blocks of a fulfilling life."
+  }
+}

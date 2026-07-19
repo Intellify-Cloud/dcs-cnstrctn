@@ -1,0 +1,34 @@
+# Site navigation — edit links here, components render them via SmartLink.
+#
+# `link` accepts:
+#   /path          — a page route (client-side navigation, e.g. /contact)
+#   /#section      — a section on the home page (works from any page)
+#   #section       — a section on the current page
+#   tel: mailto: https://  — external links
+main:
+  - label: Current Projects
+    link: /#projects
+  - label: Our Services
+    link: /#services
+  - label: Safety Standards
+    link: /#about
+  - label: Case Studies
+    link: /portfolio
+  - label: Contact Us
+    link: /contact
+
+# The INQUIRE button in the nav bar (desktop and mobile menu).
+cta:
+  label: Inquire
+  link: /contact
+
+# The "Company" column in the footer.
+footer:
+  - label: About
+    link: /#about
+  - label: Featured Projects
+    link: /portfolio
+  - label: Contact
+    link: /contact
+  - label: Privacy Policy
+    link: /privacy
