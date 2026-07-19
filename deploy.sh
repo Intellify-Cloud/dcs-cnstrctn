@@ -1,32 +1,29 @@
 #!/usr/bin/env bash
-# Build and deploy the Neha Jivan OT demo site to BOTH targets:
-#   1. Vercel (production)      — built with root base /
-#   2. GitHub Pages (gh-pages)  — built with base /ot-nj-demo/
-# Repo:  https://github.com/Intellify-Cloud/ot-nj-demo
-# Pages: https://intellify-cloud.github.io/ot-nj-demo/
+# Build and deploy this site from one GitHub repository:
+#   - main: source code for the Vue/Vite site
+#   - gh-pages: generated static website from dist/
+#
+# Repo:  https://github.com/Intellify-Cloud/dcs-cnstrctn
+# Pages: https://intellify-cloud.github.io/dcs-cnstrctn/
 set -euo pipefail
+
+REPO_NAME="dcs-cnstrctn"
+PAGES_BASE="/${REPO_NAME}/"
+PAGES_URL="https://intellify-cloud.github.io/${REPO_NAME}/"
 
 echo "Installing dependencies..."
 npm install
 
-echo "Pushing source to GitHub (main)..."
-git push origin main
-
-echo "== Vercel: building with root base =="
-npm run build
-
-echo "== Vercel: deploying (production) =="
-npx vercel --prod --yes
-
-echo "== GitHub Pages: building with base /ot-nj-demo/ =="
-DEPLOY_BASE=/ot-nj-demo/ npm run build
+echo "Building GitHub Pages site with base ${PAGES_BASE}..."
+DEPLOY_BASE="${PAGES_BASE}" npm run build
 
 echo "Adding SPA fallback for vue-router history mode..."
 cp dist/index.html dist/404.html
 
-echo "== GitHub Pages: publishing dist/ to gh-pages branch =="
-npx gh-pages -d dist
+echo "Publishing generated dist/ output to gh-pages..."
+npx gh-pages -d dist -b gh-pages -r origin
 
 echo "Done."
-echo "  Vercel:       see URL above"
-echo "  GitHub Pages: https://intellify-cloud.github.io/ot-nj-demo/"
+echo "Source branch: main"
+echo "Pages branch: gh-pages"
+echo "GitHub Pages: ${PAGES_URL}"

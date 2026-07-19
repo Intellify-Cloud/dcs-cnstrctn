@@ -9,7 +9,7 @@ const yaml = yamlPluginRaw as unknown as (options?: unknown) => Plugin
 
 // https://vite.dev/config/
 export default defineConfig({
-  // GitHub Pages serves the project site under /ot-nj-demo/; deploy.sh sets
+  // GitHub Pages serves the project site under /dcs-cnstrctn/; deploy.sh sets
   // DEPLOY_BASE accordingly. Local dev and other hosts keep the root base.
   base: process.env.DEPLOY_BASE ?? "/",
   plugins: [vue(), yaml()],

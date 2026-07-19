@@ -443,11 +443,64 @@
     color: rgb(0 24 51);
     box-shadow: 0 10px 30px -10px rgba(142, 145, 129, 0.15);
   }
-  .btn-light:hover {
-    background-color: rgb(243 243 243);
-    transform: translateY(-0.125rem);
-  }
-  .btn-light:active {
-    transform: translateY(0) scale(0.98);
-  }
+}
+
+/* Pseudo-state and texture rules live OUTSIDE @layer components: Tailwind's
+   component-layer tree-shaking drops selectors that aren't a bare scanned class
+   token (e.g. :hover, ::after), so these must be plain, always-emitted CSS. */
+.btn-primary:hover {
+  background-color: rgb(0 45 86);
+  transform: translateY(-0.125rem);
+}
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+}
+.btn-accent:hover {
+  background-color: rgb(249 189 0);
+  transform: translateY(-0.125rem);
+}
+.btn-accent:active {
+  transform: translateY(0) scale(0.98);
+}
+.btn-ghost:hover {
+  border-color: rgb(253 192 8);
+  background-color: rgb(253 192 8);
+  color: rgb(37 26 0);
+}
+.btn-ghost:active {
+  transform: scale(0.98);
+}
+.btn-outline:hover {
+  background-color: rgb(253 192 8);
+  transform: translateY(-0.125rem);
+  color: rgb(255 255 255);
+}
+.btn-outline:active {
+  transform: translateY(0) scale(0.98);
+}
+.btn-light:hover {
+  background-color: rgb(243 243 243);
+  transform: translateY(-0.125rem);
+}
+.btn-light:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+.vignette::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 120% at 20% 30%, transparent 40%, rgba(0, 24, 51, 0.35) 100%);
 }
