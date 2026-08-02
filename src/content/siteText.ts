@@ -86,7 +86,7 @@ export const siteText = {
         title: "Civil Infrastructure",
         description:
           "Roads, highways, access roads, culverts, drainage systems, erosion control, dust control, dredging and earthworks.",
-        image: "/images/hero/civil-infrastructure-africa-fyk.jpg",
+        image: "/images/services/civil-infrastructure-africa-fyk.jpg",
         imageAlt: "Civil infrastructure works including roads and drainage.",
         href: "/contact",
       },
@@ -95,7 +95,7 @@ export const siteText = {
         title: "Buildings & Facilities",
         description:
           "Institutional, commercial and residential construction, renovation, maintenance, furnishing and installation works.",
-        image: "/images/hero/buildings-and-facilities-africa-fyk.jpg",
+        image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Buildings and facilities construction works.",
         href: "/contact",
       },
@@ -140,7 +140,7 @@ export const siteText = {
         title: "Renovation & Remodeling",
         description:
           "Modernization and adaptive reuse of existing structures, combining functionality with heritage preservation.",
-        image: "/images/hero/buildings-and-facilities-africa-fyk (2).jpg",
+        image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Renovation and remodeling works.",
         href: "/contact",
       },
@@ -158,7 +158,7 @@ export const siteText = {
         title: "Architectural & Structural Design",
         description:
           "Integrated design and construction services that streamline project delivery and ensure cohesive execution.",
-        image: "/images/hero/buildings-and-facilities-africa-fyk.jpg",
+        image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Architectural and structural design works.",
         href: "/contact",
       },
