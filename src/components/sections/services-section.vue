@@ -42,20 +42,20 @@ const services = siteText.services.items;
         <article
           v-for="service in services"
           :key="service.title"
-          class="card-lift group relative min-h-[440px] overflow-hidden rounded-[5px] border border-outline-variant bg-primary shadow-card"
+          class="card-lift group relative min-h-[440px] overflow-hidden rounded-[5px] border-2 border-transparent bg-primary shadow-card transition-colors duration-300 hover:border-[#942b2d]"
         >
           <img
             :src="service.image"
             :alt="service.imageAlt"
-            class="absolute inset-0 h-full w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+            class="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/72 to-primary/20"></div>
-          <div class="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-secondary to-secondary/60"></div>
+          <div class="pointer-events-none absolute inset-0 rounded-[3px] border-2 border-transparent bg-[linear-gradient(to_top,rgba(255,255,255,0.9),rgba(255,255,255,0.42)_50%,rgba(0,0,0,0.55)_100%)] bg-origin-border [mask:linear-gradient(#000_0_0)_padding-box,linear-gradient(#000_0_0)] [mask-composite:exclude] group-hover:opacity-0"></div>
 
           <div class="relative z-10 flex min-h-[440px] flex-col justify-end p-6">
             <!-- Icon container -->
-            <div class="mb-6 flex h-14 w-14 items-center justify-center bg-[#942b2d] text-white transition-colors group-hover:bg-secondary group-hover:text-on-secondary-fixed">
+            <div class="mb-6 flex h-14 w-14 items-center justify-center bg-[#942b2d] text-white">
               <span class="material-symbols-outlined text-[28px]">{{ service.icon }}</span>
             </div>
 
