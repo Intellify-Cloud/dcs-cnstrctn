@@ -1,6 +1,6 @@
 This favicon was generated using the following font:
 
-- Font Title: Rubik Microbe
+- Font Title: Akshar
 - Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/rubikmicrobe/v2/UqyWK8oPP3hjw6ANS9rM3PsZcs8aaKgiauE.ttf
+- Font Source: https://fonts.gstatic.com/s/akshar/v17/Yq6I-LyHWTfz9rGoqDaUbHvhkAUsSZECy9CY94XsnPc.ttf
 - Font License: undefined)
