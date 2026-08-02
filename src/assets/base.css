@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+@tailwind base;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Anchor targets sit behind the floating sticky nav (pt-[46px] + h-20 = 126px);
+   offset anchored scrolls so section tops aren't hidden under it. */
+[id] {
+  scroll-margin-top: 142px;
+}
+
+body {
+  @apply bg-background text-on-background font-body-md antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Balanced headline wrapping and orphan-free paragraphs (modern browsers) */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: #fdc008;
+  color: #1b1718;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+:focus-visible {
+  outline: 2px solid theme("colors.secondary");
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

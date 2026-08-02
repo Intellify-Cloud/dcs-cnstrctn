@@ -1,0 +1,44 @@
+# Site navigation. Edit links here; components render them via SmartLink.
+#
+# link accepts:
+#   /path          - a page route
+#   /#section      - a section on the home page
+#   #section       - a section on the current page
+#   tel: mailto: https:// - external links
+main:
+  - label: Home
+    link: /
+  - label: About FYK
+    link: /about
+  - label: Services
+    link: /services
+  - label: Projects
+    link: /projects
+  - label: Team
+    link: /team
+  - label: SHEQ & CSR
+    link: /quality
+  - label: Contact
+    link: /contact
+
+cta:
+  label: Discuss A Project
+  link: /contact
+
+footer:
+  - label: About FYK
+    link: /about
+  - label: Services
+    link: /services
+  - label: Projects
+    link: /projects
+  - label: Team
+    link: /team
+  - label: SHEQ & CSR
+    link: /quality
+  - label: Compliance
+    link: /quality#credentials
+  - label: Contact
+    link: /contact
+  - label: Privacy Policy
+    link: /privacy
