@@ -1,12 +1,24 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { RouterLink } from "vue-router";
+import { RouterLink, useRoute } from "vue-router";
 import SmartLink from "../SmartLink.vue";
 import { navigation } from "../../content/navigation";
 import { siteText } from "../../content/siteText";
 
 const mobileOpen = ref(false);
 const scrolled = ref(false);
+const route = useRoute();
+
+function isActiveLink(link: string) {
+  const [path, hash] = link.split("#");
+  const targetPath = path || route.path;
+
+  if (targetPath !== route.path) {
+    return false;
+  }
+
+  return hash ? route.hash === `#${hash}` : true;
+}
 
 function handleScroll() {
   scrolled.value = window.scrollY > 20;
@@ -68,18 +80,24 @@ onUnmounted(() => {
       </button>
 
       <nav
-        class="hidden items-center justify-center gap-1 font-label-lg text-label-lg uppercase tracking-[0.1em] lg:flex"
+        class="hidden items-center justify-center gap-1 font-label-lg text-[13px] font-extrabold leading-[1.2] uppercase tracking-[0.1em] lg:flex"
       >
         <SmartLink
           v-for="item in navigation.main"
           :key="item.label"
           :link="item.link"
           :class="[
-            'relative rounded px-4 py-2 transition-colors after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-[#942b2d] after:transition-all after:duration-300 hover:after:w-3/4',
-            scrolled
+            'relative rounded px-[0.6rem] py-2 transition-colors after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:-translate-x-1/2 after:bg-[#942b2d] after:transition-all after:duration-300 hover:after:w-3/4',
+            isActiveLink(item.link) ? 'after:w-3/4' : 'after:w-0',
+            isActiveLink(item.link)
+              ? scrolled
+                ? 'bg-white/12 text-white'
+                : 'bg-primary/10 text-primary'
+              : scrolled
               ? 'text-white hover:bg-white/10 hover:text-white'
               : 'text-primary hover:bg-primary/10 hover:text-primary'
           ]"
+          :aria-current="isActiveLink(item.link) ? 'page' : undefined"
         >
           {{ item.label }}
         </SmartLink>
@@ -107,7 +125,11 @@ onUnmounted(() => {
           v-for="item in navigation.main"
           :key="item.label"
           :link="item.link"
-          class="rounded px-3 py-3 font-label-lg text-label-lg uppercase tracking-[0.1em] text-white transition-colors hover:bg-white/10"
+          :class="[
+            'rounded px-3 py-3 font-label-lg text-label-lg uppercase tracking-[0.1em] text-white transition-colors hover:bg-white/10',
+            isActiveLink(item.link) ? 'bg-white/10 text-secondary' : ''
+          ]"
+          :aria-current="isActiveLink(item.link) ? 'page' : undefined"
           @click="mobileOpen = false"
         >
           {{ item.label }}
