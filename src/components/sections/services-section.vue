@@ -5,7 +5,7 @@ const services = siteText.services.items;
 </script>
 
 <template>
-  <section id="services" v-reveal class="relative bg-surface-container-low py-20 md:py-[120px]">
+  <section id="services" v-reveal class="relative bg-surface-container-low pb-20 pt-32 md:pb-[120px] md:pt-[140px]">
     <div class="absolute inset-0 diagonal-pattern-dark"></div>
 
     <div class="relative z-10 mx-auto max-w-container-max px-margin-mobile sm:px-margin-large-mobile md:px-margin-tablet lg:px-margin-desktop">
@@ -20,9 +20,15 @@ const services = siteText.services.items;
           <h2 class="font-headline-lg text-headline-lg-mobile uppercase text-primary md:text-headline-lg accent-line">
             {{ siteText.services.heading }}
           </h2>
-          <p class="mt-5 max-w-3xl font-body-md text-body-md text-on-surface-variant">
-            {{ siteText.services.body }}
-          </p>
+          <div class="mt-5 grid max-w-3xl gap-4">
+            <p
+              v-for="paragraph in siteText.services.body"
+              :key="paragraph"
+              class="font-body-md text-body-md leading-relaxed text-on-surface-variant"
+            >
+              {{ paragraph }}
+            </p>
+          </div>
         </div>
 
         <div class="md:col-span-4 md:text-right">
@@ -75,6 +81,32 @@ const services = siteText.services.items;
           </div>
         </article>
       </div>
+
+      <section class="mt-16 grid gap-8 rounded-[5px] bg-primary p-6 text-white shadow-depth md:grid-cols-12 md:p-10">
+        <div class="md:col-span-5">
+          <span class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">
+            {{ siteText.services.integrity.eyebrow }}
+          </span>
+          <h3 class="mt-4 font-headline-lg text-[30px] uppercase leading-[1.15] md:text-[40px]">
+            {{ siteText.services.integrity.heading }}
+          </h3>
+        </div>
+        <div class="md:col-span-7">
+          <p class="font-body-md text-body-md leading-7 text-white/78">
+            {{ siteText.services.integrity.body }}
+          </p>
+          <ul class="mt-6 grid gap-3">
+            <li
+              v-for="item in siteText.services.integrity.items"
+              :key="item"
+              class="flex gap-3 rounded-[5px] bg-white/8 p-4 font-body-sm text-body-sm text-white/86"
+            >
+              <span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+              <span>{{ item }}</span>
+            </li>
+          </ul>
+        </div>
+      </section>
     </div>
   </section>
 </template>

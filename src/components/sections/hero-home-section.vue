@@ -46,9 +46,6 @@ const heroCaptions = [
   },
 ];
 
-const heroEvidence =
-  "Indeed, 21 years since its founding, the company has had an exceptional record of delivery across roads, buildings, water infrastructure, institutional facilities, maintenance and procurement.";
-
 const currentImageIndex = ref(0);
 const previousImageIndex = ref<number | null>(null);
 const displayedHeading = ref("");
@@ -136,9 +133,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <section
-    class="relative flex min-h-[760px] items-start overflow-hidden border-b-4 border-[#942b2d] bg-primary pb-28 pt-32 md:h-[90vh] md:min-h-[600px] md:items-center md:py-0"
-  >
+  <section class="relative flex min-h-[760px] items-start overflow-hidden border-b-4 border-[#942b2d] bg-primary pb-28 pt-32 md:h-[90vh] md:min-h-[660px] md:items-center md:py-0">
     <!-- Background image with dramatic overlay -->
     <div class="absolute inset-0 z-0 h-full">
       <div class="absolute inset-0 h-full" role="img" :aria-label="hero.imageAlt">
@@ -173,7 +168,7 @@ onBeforeUnmount(() => {
     <div
       class="relative z-10 mx-auto grid w-full max-w-container-max grid-cols-1 gap-grid-gutter px-6 md:grid-cols-12"
     >
-      <div class="flex flex-col gap-6 text-on-primary md:col-span-7 md:translate-y-[100px] md:gap-8 lg:col-span-6">
+      <div class="flex flex-col gap-6 text-on-primary md:col-span-7 md:translate-y-10 md:gap-7 lg:col-span-6">
         <!-- Eyebrow badge -->
         <div class="flex items-center gap-3">
           <span class="inline-block h-[1px] w-8 bg-[#942b2d]"></span>
@@ -197,15 +192,9 @@ onBeforeUnmount(() => {
 
         <p
           :key="`hero-body-${currentImageIndex}`"
-          class="max-w-xl font-body-lg text-body-lg text-on-primary/90 hero-rise d2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)] md:max-w-[45rem]"
+          class="max-w-xl text-[30px] font-semibold leading-[1.28] text-on-primary/90 hero-rise d2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)] md:max-w-[45rem]"
         >
           {{ activeCaption.body }}
-        </p>
-        <p
-          :key="`hero-evidence-${currentImageIndex}`"
-          class="max-w-xl font-body-lg text-body-lg text-on-primary/90 hero-rise d2 drop-shadow-[0_2px_6px_rgba(0,0,0,0.75)] md:max-w-[45rem]"
-        >
-          {{ heroEvidence }}
         </p>
 
         <div :key="`hero-actions-${currentImageIndex}`" class="mt-4 flex flex-wrap gap-4 hero-rise d3">

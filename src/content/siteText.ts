@@ -49,10 +49,12 @@ export const siteText = {
   },
   about: {
     eyebrow: "About FYK",
-    heading: "Multidisciplinary Delivery Across Buildings, Infrastructure And Technical Works",
+    heading: "About FYK Construction",
     highlight:
       "Established 21 years ago, exceptional record delivery across roads, buildings, water infrastructure, institutional facilities, maintenance and procurement has been our hallmark.",
     body: "FYK Construction Nigeria Limited is an engineering and construction company operating across civil works, buildings, infrastructure, water, energy-related works, procurement and project management. The company profile presents a multidisciplinary delivery team and a portfolio that includes work for public institutions, agencies and communities in several Nigerian states.",
+    foundingStatement:
+      "Indeed, 21 years since its founding, the company has had an exceptional record of delivery across roads, buildings, water infrastructure, institutional facilities, maintenance and procurement.",
     image:
       "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80",
     imageAlt: "Construction team and equipment on a large infrastructure site.",
@@ -61,6 +63,13 @@ export const siteText = {
       "Delivery experience across roads, buildings, water systems and institutional facilities",
       "Commitment to worker safety, environmental care and host-community engagement",
     ],
+    partnershipHeading: "Local Expertise, Capacity & International Partnerships",
+    partnership:
+      [
+        "FYK brings deep local expertise and years of hands-on experience navigating the complexities of Nigeria's terrain. Supported by a highly skilled workforce, modern specialised equipment and a proven commitment to excellent workmanship, the company is well equipped to address the unique demands of diverse project environments.",
+        "While firmly rooted in local knowledge and capability, FYK maintains the flexibility and international network required to draw on global insights, advanced techniques, specialised experience and strategic partnerships whenever additional expertise is needed.",
+        "At its core, FYK remains committed to developing indigenous capacity. The company actively promotes Nigerian professional participation through structured on-the-job training, continuous professional development and strategic local sourcing. Where appropriate, FYK also encourages community participation, ensuring that its projects contribute to local development while consistently meeting world-class standards.",
+      ],
     visionLabel: "Vision",
     vision:
       "To identify and address technical gaps in engineering, construction and supply, contributing to the growth of industry and the wider economy.",
@@ -75,8 +84,11 @@ export const siteText = {
   },
   services: {
     eyebrow: "Services",
-    heading: "Construction And Engineering Services Grouped For Practical Delivery",
-    body: "FYK undertakes construction and engineering work across buildings, roads, bridges, water systems, mechanical and electrical services, maintenance, procurement and technical project support.",
+    heading: "Construction and Engineering Services for Every Stage of Your Project",
+    body: [
+      "FYK Construction delivers integrated construction, engineering, renovation, and maintenance services for federal, state and local governments, international organisations, commercial and industrial businesses, institutions, and private clients. From planning, design, and project management to civil works, building construction, infrastructure development, renovations, maintenance, and specialist engineering, our multidisciplinary team delivers projects safely, efficiently, and to the highest standards of quality.",
+      "Whether you are developing new infrastructure, expanding existing facilities, rehabilitating ageing assets, or undertaking renovation projects, FYK Construction provides the technical expertise, skilled workforce, and project management capability to deliver successful outcomes from concept through completion.",
+    ],
     cta: "Discuss Scope",
     ctaHref: "/contact",
     itemCta: "Request Details",
@@ -109,6 +121,33 @@ export const siteText = {
         href: "/contact",
       },
       {
+        icon: "construction",
+        title: "Renovation & Remodeling",
+        description:
+          "Modernising infrastructure, facilities and properties with expert renovations that add lasting value.",
+        image: "/images/services/buildings-and-facilities.jpg",
+        imageAlt: "Renovation and remodeling works.",
+        href: "/contact",
+      },
+      {
+        icon: "engineering",
+        title: "Construction & Engineering Consultancy",
+        description:
+          "Technical advisory, construction planning and engineering support for practical project delivery.",
+        image: "/images/services/project-management.jpg",
+        imageAlt: "Construction and engineering consultancy support.",
+        href: "/contact",
+      },
+      {
+        icon: "inventory_2",
+        title: "Procurement & Installation",
+        description:
+          "Procurement, supply, delivery and installation of project equipment, materials and related systems.",
+        image: "/images/services/procurement-and-installation.jpg",
+        imageAlt: "Procurement and installation works.",
+        href: "/contact",
+      },
+      {
         icon: "electrical_services",
         title: "M&E And Energy Works",
         description:
@@ -127,33 +166,6 @@ export const siteText = {
         href: "/contact",
       },
       {
-        icon: "inventory_2",
-        title: "Procurement & Installation",
-        description:
-          "Procurement, supply, delivery and installation of project equipment, materials and related systems.",
-        image: "/images/services/procurement-and-installation.jpg",
-        imageAlt: "Procurement and installation works.",
-        href: "/contact",
-      },
-      {
-        icon: "construction",
-        title: "Renovation & Remodeling",
-        description:
-          "Modernization and adaptive reuse of existing structures, combining functionality with heritage preservation.",
-        image: "/images/services/buildings-and-facilities.jpg",
-        imageAlt: "Renovation and remodeling works.",
-        href: "/contact",
-      },
-      {
-        icon: "engineering",
-        title: "Construction & Engineering Consultancy",
-        description:
-          "Technical advisory, construction planning and engineering support for practical project delivery.",
-        image: "/images/services/project-management.jpg",
-        imageAlt: "Construction and engineering consultancy support.",
-        href: "/contact",
-      },
-      {
         icon: "architecture",
         title: "Architectural & Structural Design",
         description:
@@ -163,6 +175,17 @@ export const siteText = {
         href: "/contact",
       },
     ],
+    integrity: {
+      eyebrow: "Delivery Standards",
+      heading: "Built On Operational Integrity And Strict Standards",
+      body:
+        "Every service is qualified by disciplined planning, competent supervision, responsible procurement, site safety controls, environmental care and quality checks that protect the client, workforce and host community.",
+      items: [
+        "Clear scope definition before mobilization",
+        "Health, safety, environmental and quality controls during delivery",
+        "Transparent coordination with clients, consultants, suppliers and communities",
+      ],
+    },
     closing:
       "Need a delivery partner for an infrastructure, building or technical project? Contact FYK to discuss scope, programme and requirements.",
   },
@@ -283,9 +306,17 @@ export const siteText = {
     leader: {
       name: "Engr. Adebisi Adebayo, FNSE",
       role: "Chief Executive Officer",
+      image: "/images/team/BAdebayo_2.jpg",
+      imageAlt: "Engr. Adebisi Adebayo, Chief Executive Officer of FYK Construction",
       summary:
         "Civil engineer and construction-management professional with recorded experience in engineering design, project supervision, infrastructure planning and capital-project monitoring.",
       affiliations: ["COREN", "Nigerian Society of Engineers"],
+    },
+    featuredMember: {
+      name: "K. Adebayo",
+      role: "Project Leadership",
+      image: "/images/team/K-corporate-headshot-3.jpg",
+      imageAlt: "K. Adebayo of FYK Construction",
     },
     members: [
       ["Surveyor Fashikun Samuel Adeniyi", "Registered Surveyor"],
@@ -310,8 +341,8 @@ export const siteText = {
   },
   quality: {
     eyebrow: "SHEQ & CSR",
-    heading: "Safety, Health, Environment, And Quality",
-    body: "FYK's delivery commitments cover health and safety, environmental care, community partnership, local content and skills development.",
+    heading: "Safety, Health, Environmental, And Quality",
+    body: "At FYK Construction, Safety, Health, Environment, Quality (SHEQ), and Corporate Social Responsibility (CSR) are fundamental to the way we work. We are committed to protecting people, preserving the environment, delivering work to the highest standards, and creating a positive impact in the communities where we operate. These principles guide every decision we make, helping us deliver projects responsibly, ethically, and sustainably.",
     items: [
       {
         icon: "health_and_safety",
@@ -346,15 +377,15 @@ export const siteText = {
     heading: "Building Stronger Communities",
     intro:
       "Building stronger communities and leaving a lasting positive footprint is just as important as the structures we erect.",
-    body: "Our Corporate Social Responsibility approach ensures every construction project creates real value well beyond the site perimeter. We partner with local communities to support local hiring, uplift surrounding neighborhoods, minimize environmental disruption, and invest in sustainable building practices. By aligning our construction expertise with genuine social commitment, we build more than just physical infrastructure, we help build resilient, thriving communities.",
+    body: "Our Corporate Social Responsibility approach ensures every project delivers value beyond the construction site. We create jobs for Nigerians, develop local skills, support host communities, protect the environment, and apply responsible building practices. We do more than construct infrastructure. We strengthen communities, create lasting opportunities, and leave a positive environmental legacy for future generations.",
     closing: "Work with us to deliver construction projects that make a meaningful, lasting impact.",
   },
   credentials: {
     eyebrow: "Compliance",
-    heading: "Compliance And Professional Capacity",
+    heading: "Certified, Compliant and Accredited",
     body: "The supplied profile includes corporate records, professional capacity details and historical compliance documents. Current credentials should be verified before public badge or certificate claims are displayed.",
     points: [
-      "Certificate of Incorporation record shown in the supplied profile",
+      "Compliance and Industry Accreditations",
       "Professional capacity across civil, mechanical and electrical engineering, architecture, surveying and quantity surveying",
       "Historical compliance records covering pension, ITF, NSITF, FRC, SCUML, contractor membership, tax and financial records",
     ],

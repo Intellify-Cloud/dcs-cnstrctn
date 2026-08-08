@@ -30,16 +30,24 @@ const team = siteText.team;
       </div>
 
       <div v-if="compact" class="grid gap-gutter lg:grid-cols-[1fr_1fr]">
-        <article class="rounded-[5px] border border-outline-variant bg-primary p-8 text-white shadow-card">
-          <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">
-            {{ team.leader.role }}
-          </p>
-          <h3 class="mt-4 font-headline-md text-3xl font-bold">
-            {{ team.leader.name }}
-          </h3>
-          <p class="mt-5 font-body-md text-body-md leading-relaxed text-white/75">
-            {{ team.leader.summary }}
-          </p>
+        <article class="overflow-hidden rounded-[5px] border border-outline-variant bg-primary text-white shadow-card">
+          <img
+            :src="team.leader.image"
+            :alt="team.leader.imageAlt"
+            class="aspect-[4/3] w-full object-cover object-top"
+            loading="lazy"
+          />
+          <div class="p-8">
+            <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">
+              {{ team.leader.role }}
+            </p>
+            <h3 class="mt-4 font-headline-md text-3xl font-bold">
+              {{ team.leader.name }}
+            </h3>
+            <p class="mt-5 font-body-md text-body-md leading-relaxed text-white/75">
+              {{ team.leader.summary }}
+            </p>
+          </div>
         </article>
 
         <div class="rounded-[5px] border border-outline-variant bg-surface-container-lowest p-8 shadow-card">
@@ -65,26 +73,53 @@ const team = siteText.team;
       </div>
 
       <div v-else class="grid gap-gutter lg:grid-cols-[0.8fr_1.2fr]">
-        <article class="rounded-[5px] border border-outline-variant bg-primary p-8 text-white shadow-card">
-          <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">
-            {{ team.leader.role }}
-          </p>
-          <h3 class="mt-4 font-headline-md text-3xl font-bold">
-            {{ team.leader.name }}
-          </h3>
-          <p class="mt-5 font-body-md text-body-md leading-relaxed text-white/75">
-            {{ team.leader.summary }}
-          </p>
-          <div class="mt-6 flex flex-wrap gap-2">
-            <span
-              v-for="affiliation in team.leader.affiliations"
-              :key="affiliation"
-              class="bg-white/10 px-3 py-1 font-label-md text-label-md uppercase text-secondary"
-            >
-              {{ affiliation }}
-            </span>
-          </div>
-        </article>
+        <div class="grid gap-gutter">
+          <article class="overflow-hidden rounded-[5px] border border-outline-variant bg-primary text-white shadow-card">
+            <img
+              :src="team.leader.image"
+              :alt="team.leader.imageAlt"
+              class="aspect-[4/3] w-full object-cover object-top"
+              loading="lazy"
+            />
+            <div class="p-8">
+              <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">
+                {{ team.leader.role }}
+              </p>
+              <h3 class="mt-4 font-headline-md text-3xl font-bold">
+                {{ team.leader.name }}
+              </h3>
+              <p class="mt-5 font-body-md text-body-md leading-relaxed text-white/75">
+                {{ team.leader.summary }}
+              </p>
+              <div class="mt-6 flex flex-wrap gap-2">
+                <span
+                  v-for="affiliation in team.leader.affiliations"
+                  :key="affiliation"
+                  class="bg-white/10 px-3 py-1 font-label-md text-label-md uppercase text-secondary"
+                >
+                  {{ affiliation }}
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article class="overflow-hidden rounded-[5px] border border-outline-variant bg-surface-container-lowest shadow-card">
+            <img
+              :src="team.featuredMember.image"
+              :alt="team.featuredMember.imageAlt"
+              class="aspect-[4/3] w-full object-cover object-top"
+              loading="lazy"
+            />
+            <div class="p-6">
+              <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-[#942b2d]">
+                {{ team.featuredMember.role }}
+              </p>
+              <h3 class="mt-3 font-headline-md text-2xl font-bold text-primary">
+                {{ team.featuredMember.name }}
+              </h3>
+            </div>
+          </article>
+        </div>
 
         <div class="rounded-[5px] border border-outline-variant bg-surface-container-lowest shadow-card">
           <div class="grid border-b border-outline-variant bg-surface-container-low px-5 py-4 font-label-md text-label-md uppercase tracking-[0.1em] text-primary sm:grid-cols-[1fr_1fr]">

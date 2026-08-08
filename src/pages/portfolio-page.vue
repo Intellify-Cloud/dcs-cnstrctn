@@ -116,7 +116,7 @@ function toggleProject(title: string) {
           :class="activeProject === project.title ? 'translate-y-0' : 'translate-y-full'"
         >
           <p class="font-label-md text-label-md uppercase tracking-[0.1em] text-[#f3b7b8]">
-            {{ project.location }}
+            Project Details
           </p>
           <h3 class="mt-2 font-headline-md text-2xl font-bold text-white">
             {{ project.title }}

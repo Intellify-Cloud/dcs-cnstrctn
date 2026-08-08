@@ -24,6 +24,14 @@ function handleScroll() {
   scrolled.value = window.scrollY > 20;
 }
 
+function handleLogoClick() {
+  mobileOpen.value = false;
+
+  if (route.path === "/") {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}
+
 onMounted(() => {
   window.addEventListener("scroll", handleScroll, { passive: true });
 });
@@ -54,7 +62,7 @@ onUnmounted(() => {
               ? 'bg-transparent shadow-none ring-0'
               : 'bg-transparent shadow-none ring-0'
           ]"
-          @click="mobileOpen = false"
+          @click="handleLogoClick"
         >
           <img
             :src="scrolled ? siteText.brand.logo : siteText.brand.defaultLogo"
