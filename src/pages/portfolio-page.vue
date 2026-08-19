@@ -13,22 +13,6 @@ interface ProjectCard {
 
 const activeProject = ref<string | null>(null);
 
-function splitClientLocation(value: string) {
-  const parts = value.split(",").map((part) => part.trim()).filter(Boolean);
-
-  if (parts.length > 1) {
-    return {
-      client: parts.slice(0, -1).join(", "),
-      location: parts[parts.length - 1],
-    };
-  }
-
-  return {
-    client: "To be confirmed",
-    location: value,
-  };
-}
-
 function getClient(details: string[]) {
   return details.find((detail) => detail.toLowerCase().startsWith("client:"))?.replace(/^client:\s*/i, "") ?? "To be confirmed";
 }
@@ -42,17 +26,14 @@ const projectCards = computed<ProjectCard[]>(() => [
     image: project.image,
     imageAlt: project.imageAlt,
   })),
-  ...siteText.projects.register.map(([title, clientLocation]) => {
-    const parsed = splitClientLocation(clientLocation);
-
-    return {
-      title,
-      client: parsed.client,
-      location: parsed.location,
-      scope: title,
-    };
-  }),
 ]);
+
+const registerCards = computed(() =>
+  siteText.projects.register.map(([title, clientLocation]) => ({
+    title,
+    clientLocation,
+  })),
+);
 
 function toggleProject(title: string) {
   activeProject.value = activeProject.value === title ? null : title;
@@ -90,11 +71,7 @@ function toggleProject(title: string) {
               class="h-full w-full object-cover transition-transform duration-[1800ms] ease-out group-hover:scale-105"
               loading="lazy"
             />
-            <div v-else class="flex h-full w-full items-center justify-center bg-[#942b2d] px-8 text-center">
-              <span class="font-label-lg text-label-lg uppercase tracking-[0.16em] text-white/86">
-                Project Image Pending
-              </span>
-            </div>
+            <div v-else class="h-full w-full bg-[#942b2d]"></div>
             <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/28 to-transparent"></div>
           </div>
 
@@ -152,5 +129,38 @@ function toggleProject(title: string) {
     <p class="mt-10 max-w-3xl font-body-sm text-body-sm text-on-surface-variant">
       Project photographs will be updated as approved images become available.
     </p>
+
+    <div class="mt-16 border-t border-outline-variant pt-12">
+      <div class="mb-8 flex items-end justify-between gap-6">
+        <div>
+          <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-[#942b2d]">
+            Extended Project Register
+          </p>
+          <h2 class="mt-3 font-headline-md text-3xl font-bold text-primary">
+            Additional Delivered Works
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <article
+          v-for="project in registerCards"
+          :key="project.title"
+          class="min-h-[180px] rounded-[5px] border border-outline-variant bg-surface-container-lowest p-5 shadow-card"
+        >
+          <h3 class="font-headline-md text-xl font-bold leading-snug text-primary">
+            {{ project.title }}
+          </h3>
+          <div class="mt-5">
+            <p class="font-label-md text-label-md uppercase tracking-[0.12em] text-[#942b2d]">
+              Client / Location
+            </p>
+            <p class="mt-2 font-body-md text-body-md leading-relaxed text-on-surface-variant">
+              {{ project.clientLocation }}
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
   </section>
 </template>
