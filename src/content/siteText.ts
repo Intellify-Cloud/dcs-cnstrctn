@@ -468,7 +468,7 @@ export const siteText = {
   },
   contact: {
     eyebrow: "Contact",
-    heading: "Talk To FYK Construction About Your Next Requirement",
+    heading: "Talk To FYK Construction About Your Next Project",
     body: "Talk to FYK Construction about your next building, infrastructure, water, energy or project-management requirement.",
     cta: "Request A Consultation",
     email: "info@fykconstructions.com",
