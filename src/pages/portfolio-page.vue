@@ -3,6 +3,7 @@ import { computed, ref } from "vue";
 import { siteText } from "../content/siteText";
 
 interface ProjectCard {
+  id: string;
   title: string;
   client: string;
   location: string;
@@ -17,26 +18,37 @@ function getClient(details: string[]) {
   return details.find((detail) => detail.toLowerCase().startsWith("client:"))?.replace(/^client:\s*/i, "") ?? "To be confirmed";
 }
 
-const projectCards = computed<ProjectCard[]>(() => [
-  ...siteText.projects.items.map((project) => ({
-    title: project.title,
-    client: getClient(project.details),
-    location: project.location,
-    scope: project.description,
-    image: project.image,
-    imageAlt: project.imageAlt,
-  })),
-]);
+function shuffledCards(cards: ProjectCard[]) {
+  const shuffled = [...cards];
 
-const registerCards = computed(() =>
-  siteText.projects.register.map(([title, clientLocation]) => ({
-    title,
-    clientLocation,
-  })),
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+  }
+
+  return shuffled;
+}
+
+const selectedProjectCards = ref(
+  shuffledCards(
+    siteText.projects.items.map((project, index) => ({
+      id: `featured-${index}`,
+      title: project.title,
+      client: getClient(project.details),
+      location: project.location,
+      scope: project.description,
+      image: project.image,
+      imageAlt: project.imageAlt,
+    })),
+  ).slice(0, 6),
 );
 
-function toggleProject(title: string) {
-  activeProject.value = activeProject.value === title ? null : title;
+const projectCards = computed<ProjectCard[]>(() => selectedProjectCards.value);
+
+const registerCards = computed(() => siteText.projects.register.slice(0, 6));
+
+function toggleProject(id: string) {
+  activeProject.value = activeProject.value === id ? null : id;
 }
 </script>
 
@@ -58,9 +70,9 @@ function toggleProject(title: string) {
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
       <article
         v-for="project in projectCards"
-        :key="project.title"
+        :key="project.id"
         class="card-lift group relative min-h-[520px] overflow-hidden rounded-[5px] border shadow-card transition-colors duration-300"
-        :class="activeProject === project.title ? 'border-[#942b2d] bg-primary' : 'border-outline-variant bg-surface-container-lowest'"
+        :class="activeProject === project.id ? 'border-[#942b2d] bg-primary' : 'border-outline-variant bg-surface-container-lowest'"
       >
         <div class="block w-full text-left">
           <div class="relative aspect-[4/3] overflow-hidden bg-[#942b2d]">
@@ -77,7 +89,7 @@ function toggleProject(title: string) {
 
           <div
             class="p-6 pb-24 transition-opacity duration-300"
-            :class="activeProject === project.title ? 'opacity-0' : 'opacity-100'"
+            :class="activeProject === project.id ? 'opacity-0' : 'opacity-100'"
           >
             <p class="font-label-md text-label-md uppercase tracking-[0.1em] text-[#942b2d]">
               {{ project.location }}
@@ -90,7 +102,7 @@ function toggleProject(title: string) {
 
         <div
           class="absolute inset-x-0 top-0 z-20 flex min-h-full flex-col justify-start overflow-y-auto bg-gradient-to-b from-primary/68 via-primary/58 to-primary/48 p-6 pb-24 text-white backdrop-blur-[1px] transition-transform duration-500 ease-out"
-          :class="activeProject === project.title ? 'translate-y-0' : 'translate-y-full'"
+          :class="activeProject === project.id ? 'translate-y-0' : 'translate-y-full'"
         >
           <p class="font-label-md text-label-md uppercase tracking-[0.1em] text-[#f3b7b8]">
             Project Details
@@ -118,10 +130,10 @@ function toggleProject(title: string) {
         <button
           type="button"
           class="absolute bottom-6 left-6 right-6 z-30 inline-flex min-h-11 items-center justify-center rounded-[5px] border border-[#942b2d]/35 bg-[#942b2d] px-4 py-3 text-center font-label-md text-label-md uppercase text-white transition-colors hover:bg-[#5f191b]"
-          :class="activeProject === project.title ? 'border-white/50 bg-[#5f191b] hover:bg-[#421112]' : ''"
-          @click="toggleProject(project.title)"
+          :class="activeProject === project.id ? 'border-white/50 bg-[#5f191b] hover:bg-[#421112]' : ''"
+          @click="toggleProject(project.id)"
         >
-          {{ activeProject === project.title ? "Close" : "View Details" }}
+          {{ activeProject === project.id ? "Close" : "View Details" }}
         </button>
       </article>
     </div>
@@ -134,7 +146,7 @@ function toggleProject(title: string) {
       <div class="mb-8 flex items-end justify-between gap-6">
         <div>
           <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-[#942b2d]">
-            Extended Project Register
+            {{ siteText.projects.registerHeading }}
           </p>
           <h2 class="mt-3 font-headline-md text-3xl font-bold text-primary">
             Additional Delivered Works
@@ -156,7 +168,7 @@ function toggleProject(title: string) {
               Client / Location
             </p>
             <p class="mt-2 font-body-md text-body-md leading-relaxed text-on-surface-variant">
-              {{ project.clientLocation }}
+              {{ project.client }} / {{ project.location }}
             </p>
           </div>
         </article>

@@ -203,68 +203,129 @@ export const siteText = {
     allHref: "/projects",
     items: [
       {
-        title: "1000-Seater Lecture Theatre",
+        title: "Kogi State University Entrepreneurship Study Centre (Phase 1)",
+        location: "Anyigba, Kogi State",
+        image:
+          "/images/projects/Kogi State University Entrepreneurship Study Centre (Phase 1).jpg",
+        imageAlt: "Kogi State University Entrepreneurship Study Centre Phase 1.",
+        metric: "Phase 1",
+        description: "Kogi State University Entrepreneurship Study Centre.",
+        details: ["Client: Kogi State University"],
+      },
+      {
+        title: "Kogi State University Entrepreneurship Study Centre (Phase 2)",
+        location: "Anyigba, Kogi State",
+        image:
+          "/images/projects/Kogi State University Entrepreneurship Study Centre (Phase 2).jpg",
+        imageAlt: "Kogi State University Entrepreneurship Study Centre Phase 2.",
+        metric: "Phase 2",
+        description: "Kogi State University Entrepreneurship Study Centre.",
+        details: ["Client: Kogi State University"],
+      },
+      {
+        title: "1000 Seat Lecture Theatre, Federal University Wukari",
         location: "Wukari, Taraba State",
         image:
           "/images/projects/1000-seater-lecture-theatre-federal-university-wukari-taraba-state-01.jpg",
-        imageAlt: "1000-seater lecture theatre at Federal University Wukari.",
+        imageAlt: "1000 seat lecture theatre at Federal University Wukari.",
         metric: "1000 seats",
-        description: "Construction of a 1000-seater lecture theatre for Federal University.",
-        details: ["Client: Federal University"],
-      },
-      {
-        title: "Kogi State University Language Laboratory",
-        location: "Anyigba",
-        metric: "Laboratory",
         description:
-          "Construction, furnishing and equipping of a language laboratory for the Faculty of Education.",
-        details: ["Client: Kogi State University, Anyigba"],
+          "Construction of 1000 Seat Lecture Theatre, Federal University, Wukari, Taraba State.",
+        details: ["Client: Federal University, Wukari"],
       },
       {
-        title: "NAMA MD/CE Operational Quarters",
-        location: "Abuja",
-        metric: "Quarters",
-        description: "Reconstruction of operational quarters.",
-        details: ["Client: Nigerian Airspace Management Agency"],
-      },
-      {
-        title: "Kogi State University Entrepreneurship Study Centre",
-        location: "Anyigba",
-        metric: "Study centre",
-        description: "Construction of entrepreneurship study-centre building.",
-        details: ["Client: Kogi State University, Anyigba"],
-      },
-      {
-        title: "Rehabilitation of Matale and Erinpa Community Farm Road",
-        location: "Matale and Erinpa Community, Plateau State",
-        metric: "1.5 km",
+        title: "Furnishing Lecture Theatre, Federal University Wukari",
+        location: "Wukari, Taraba State",
+        image:
+          "/images/projects/Furnishing Lecture Theatre, Federal University, Wukari, Taraba State.jpg",
+        imageAlt: "Furnished lecture theatre at Federal University Wukari.",
+        metric: "Furnishing",
         description:
-          "Rehabilitation of 1.5 km farm road and drainage, with completion certificate dated 28 November 2023.",
-        details: [
-          "Client: Federal College of Veterinary & Medical Laboratory Technology, National Veterinary Research Institute, Vom",
-        ],
+          "Furnishing of the 1000 Seat Lecture Theatre, Federal University, Wukari, Taraba State.",
+        details: ["Client: Federal University, Wukari"],
       },
       {
-        title: "Durumi Asphaltic Road",
-        location: "Durumi, FCT, Abuja",
-        metric: "0.7 km",
-        description: "Construction of 0.7 km asphaltic road.",
-        details: ["Client: Federal Ministry of Agriculture and Rural Development"],
+        title: "Nigeria Institute of Management Headquarters",
+        location: "Garki, FCT Abuja",
+        image:
+          "/images/projects/Construction and Furnishings of Nigeria Institute of Management Headquarters,Garki Abuja.jpg",
+        imageAlt: "Nigeria Institute of Management Headquarters in Garki Abuja.",
+        metric: "Headquarters",
+        description:
+          "Construction and furnishings of Nigeria Institute of Management Headquarters, Garki Abuja.",
+        details: ["Client: Nigeria Institute of Management Headquarters, Garki Abuja"],
+      },
+      {
+        title: "Fencing and Gate House, Abubakar Tafawa Balewa University",
+        location: "Bauchi State",
+        image:
+          "/images/projects/Construction of Fencing and Gate House, Abubakar Tafawa Balewa University, Bauchi..jpeg",
+        imageAlt: "Fencing and gate house at Abubakar Tafawa Balewa University Bauchi.",
+        metric: "Gate house",
+        description:
+          "Construction of fencing and gate house, Abubakar Tafawa Balewa University, Bauchi.",
+        details: ["Client: Abubakar Tafawa Balewa University, Bauchi"],
+      },
+      {
+        title: "Riverine Communities Construction and Piping Works",
+        location: "Riverine Communities, Rivers State",
+        image:
+          "/images/projects/Construction and Piping of Riverine Communities in Rivers State for European Union Commission Water and Sanitation Scheme.jpg",
+        imageAlt: "Construction and piping works in riverine communities in Rivers State.",
+        metric: "Water scheme",
+        description:
+          "Construction and piping of riverine communities in Rivers State for European Union Commission Water and Sanitation Scheme.",
+        details: ["Client: European Union Commission"],
+      },
+      {
+        title: "Overhead Water Tower for Communities in Rivers State",
+        location: "Riverine Communities, Rivers State",
+        image:
+          "/images/projects/Construction of Overhead Water Tower for Communities in Rivers State for European Union Commission Water and Sanitation Scheme.jpg",
+        imageAlt: "Overhead water tower for communities in Rivers State.",
+        metric: "Water tower",
+        description:
+          "Construction of overhead water tower for communities in Rivers State for European Union Commission Water and Sanitation Scheme.",
+        details: ["Client: European Union Commission"],
       },
     ],
     register: [
-      ["Beaconing of Mineral Sites in Selected Geo-Political Zones", "Mining Cadastre Office, Abuja"],
-      ["Supply of Ambulance and Toyota Hiace for Zuru LGA", "Universal Basic Education Commission / Kebbi South, Kebbi State"],
-      ["Upgrade of access road and culverts at Gimi Earth Dam", "Upper Niger River Basin Development Authority, Niger State"],
-      ["General maintenance of Aiyetoro-Mopa-Isanlu-Egbe border road", "Kogi State"],
-      ["General maintenance of Kabba-Avere Road", "Kogi State"],
-      ["Soft and hard landscaping of administrative complex", "Rufus Giwa Polytechnic, Owo, Ondo State"],
-      ["Special repair of Azikoro-Onuebum-Otuoke Road", "Bayelsa State"],
-      ["Four-storey block of one-bedroom flats", "Abuja Mass Housing Development Project, FCT"],
-      ["Site clearing for Abuja Mass Housing Development Project", "FCT, Abuja"],
-      ["Water works in Rivers State", "Ministry of Budget and National Planning"],
-      ["Solar-powered borehole in Gwagwalada rural community", "Upper Niger Basin Development Authority / FCT"],
-      ["Fence and gatehouse", "Abubakar Tafawa Balewa University, Bauchi"],
+      {
+        title: "Supply of Ambulance and Toyota Hiace for Zuru LGA",
+        client: "Universal Basic Education Commission",
+        location: "Kebbi South, Kebbi State",
+        scope: "Supply of ambulance and Toyota Hiace for Zuru LGA.",
+      },
+      {
+        title: "Upgrade of Access Road and Culverts at Gimi Earth Dam",
+        client: "Upper Niger River Basin Development Authority",
+        location: "Niger State",
+        scope: "Upgrade of access road and culverts at Gimi Earth Dam.",
+      },
+      {
+        title: "General Maintenance of Aiyetoro-Mopa-Isanlu-Egbe Border Road",
+        client: "Kogi State",
+        location: "Kogi State",
+        scope: "General maintenance of Aiyetoro-Mopa-Isanlu-Egbe border road.",
+      },
+      {
+        title: "Special Repair of Azikoro-Onuebum-Otuoke Road",
+        client: "Bayelsa State",
+        location: "Bayelsa State",
+        scope: "Special repair of Azikoro-Onuebum-Otuoke Road.",
+      },
+      {
+        title: "Four-Storey Block of One-Bedroom Flats",
+        client: "Abuja Mass Housing Development Project",
+        location: "FCT, Abuja",
+        scope: "Construction of a four-storey block of one-bedroom flats.",
+      },
+      {
+        title: "Water Works in Rivers State",
+        client: "Ministry of Budget and National Planning",
+        location: "Rivers State",
+        scope: "Water works in Rivers State.",
+      },
     ],
   },
   approach: {
