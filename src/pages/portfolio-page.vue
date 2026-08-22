@@ -46,9 +46,28 @@ const selectedProjectCards = ref(
 const projectCards = computed<ProjectCard[]>(() => selectedProjectCards.value);
 
 const registerCards = computed(() => siteText.projects.register.slice(0, 6));
+const registerStartIndex = ref(0);
+const registerVisibleCount = 4;
+
+const visibleRegisterCards = computed(() => {
+  const cards = registerCards.value;
+  const visibleCount = Math.min(registerVisibleCount, cards.length);
+
+  return Array.from({ length: visibleCount }, (_, offset) => cards[(registerStartIndex.value + offset) % cards.length]);
+});
 
 function toggleProject(id: string) {
   activeProject.value = activeProject.value === id ? null : id;
+}
+
+function showPreviousRegister() {
+  const total = registerCards.value.length;
+  registerStartIndex.value = (registerStartIndex.value - 1 + total) % total;
+}
+
+function showNextRegister() {
+  const total = registerCards.value.length;
+  registerStartIndex.value = (registerStartIndex.value + 1) % total;
 }
 </script>
 
@@ -154,24 +173,63 @@ function toggleProject(id: string) {
         </div>
       </div>
 
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <article
-          v-for="project in registerCards"
-          :key="project.title"
-          class="min-h-[180px] rounded-[5px] border border-outline-variant bg-surface-container-lowest p-5 shadow-card"
+      <div class="grid items-center gap-4 lg:grid-cols-[auto_1fr_auto]">
+        <button
+          type="button"
+          class="hidden h-12 w-12 items-center justify-center rounded-[5px] bg-[#942b2d] text-white transition-colors hover:bg-[#7f2426] lg:flex"
+          aria-label="Previous delivered works"
+          @click="showPreviousRegister"
         >
-          <h3 class="font-headline-md text-xl font-bold leading-snug text-primary">
-            {{ project.title }}
-          </h3>
-          <div class="mt-5">
-            <p class="font-label-md text-label-md uppercase tracking-[0.12em] text-[#942b2d]">
-              Client / Location
-            </p>
-            <p class="mt-2 font-body-md text-body-md leading-relaxed text-on-surface-variant">
-              {{ project.client }} / {{ project.location }}
-            </p>
-          </div>
-        </article>
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <article
+            v-for="project in visibleRegisterCards"
+            :key="project.title"
+            class="min-h-[180px] rounded-[5px] border border-outline-variant bg-surface-container-lowest p-5 shadow-card transition-transform duration-300"
+          >
+            <h3 class="font-headline-md text-xl font-bold leading-snug text-primary">
+              {{ project.title }}
+            </h3>
+            <div class="mt-5">
+              <p class="font-label-md text-label-md uppercase tracking-[0.12em] text-[#942b2d]">
+                Client / Location
+              </p>
+              <p class="mt-2 font-body-md text-body-md leading-relaxed text-on-surface-variant">
+                {{ project.client }} / {{ project.location }}
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <button
+          type="button"
+          class="hidden h-12 w-12 items-center justify-center rounded-[5px] bg-[#942b2d] text-white transition-colors hover:bg-[#7f2426] lg:flex"
+          aria-label="Next delivered works"
+          @click="showNextRegister"
+        >
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+
+      <div class="mt-6 flex justify-center gap-3 lg:hidden">
+        <button
+          type="button"
+          class="h-12 w-12 rounded-[5px] bg-[#942b2d] text-white transition-colors hover:bg-[#7f2426]"
+          aria-label="Previous delivered works"
+          @click="showPreviousRegister"
+        >
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button
+          type="button"
+          class="h-12 w-12 rounded-[5px] bg-[#942b2d] text-white transition-colors hover:bg-[#7f2426]"
+          aria-label="Next delivered works"
+          @click="showNextRegister"
+        >
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
       </div>
     </div>
   </section>
