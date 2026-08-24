@@ -1,7 +1,41 @@
 <script setup lang="ts">
+import { computed, onBeforeUnmount, ref, watch } from "vue";
 import { siteText } from "../../content/siteText";
 
 const services = siteText.services.items;
+const activeServiceTitle = ref<string | null>(null);
+
+const activeService = computed(() =>
+  services.find((service) => service.title === activeServiceTitle.value) ?? null,
+);
+
+function openServiceDetails(title: string) {
+  activeServiceTitle.value = title;
+}
+
+function closeServiceDetails() {
+  activeServiceTitle.value = null;
+}
+
+function handleModalKeydown(event: KeyboardEvent) {
+  if (event.key === "Escape") {
+    closeServiceDetails();
+  }
+}
+
+watch(activeServiceTitle, (title) => {
+  if (typeof document === "undefined") {
+    return;
+  }
+
+  document.body.style.overflow = title ? "hidden" : "";
+});
+
+onBeforeUnmount(() => {
+  if (typeof document !== "undefined") {
+    document.body.style.overflow = "";
+  }
+});
 </script>
 
 <template>
@@ -71,13 +105,14 @@ const services = siteText.services.items;
               {{ service.description }}
             </p>
 
-            <a
-              :href="service.href"
+            <button
+              type="button"
               class="mt-6 inline-flex min-h-11 w-full items-center justify-center rounded-[5px] border border-white/55 bg-[#942b2d]/90 px-4 py-3 text-center font-label-md text-label-md uppercase text-white shadow-[inset_0_1px_0_rgba(255,255,255,0.28),0_10px_24px_rgba(0,0,0,0.22)] transition-[background-color,border-color,box-shadow] duration-200 hover:border-white/70 hover:bg-[#5f191b] hover:text-white hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.18),0_12px_28px_rgba(0,0,0,0.32)]"
-              :aria-label="`Request details about ${service.title}`"
+              :aria-label="`More information about ${service.title}`"
+              @click="openServiceDetails(service.title)"
             >
               {{ siteText.services.itemCta }}
-            </a>
+            </button>
           </div>
         </article>
       </div>
@@ -108,5 +143,89 @@ const services = siteText.services.items;
         </div>
       </section>
     </div>
+
+    <Teleport to="body">
+      <div
+        v-if="activeService"
+        class="fixed inset-0 z-50 flex items-stretch justify-center md:items-center md:p-6"
+        role="dialog"
+        aria-modal="true"
+        :aria-labelledby="`service-modal-${activeService.title.replaceAll(' ', '-')}`"
+        @keydown="handleModalKeydown"
+      >
+        <Transition
+          enter-active-class="transition-opacity duration-300 ease-out"
+          enter-from-class="opacity-0"
+          enter-to-class="opacity-100"
+          leave-active-class="transition-opacity duration-200 ease-in"
+          leave-from-class="opacity-100"
+          leave-to-class="opacity-0"
+        >
+          <button
+            v-if="activeService"
+            type="button"
+            class="absolute inset-0 bg-primary/76 backdrop-blur-sm"
+            aria-label="Close service details"
+            @click="closeServiceDetails"
+          ></button>
+        </Transition>
+
+        <Transition
+          enter-active-class="transition duration-300 ease-out"
+          enter-from-class="translate-y-8 opacity-0 md:translate-y-4 md:scale-[0.98]"
+          enter-to-class="translate-y-0 opacity-100 md:scale-100"
+          leave-active-class="transition duration-200 ease-in"
+          leave-from-class="translate-y-0 opacity-100 md:scale-100"
+          leave-to-class="translate-y-8 opacity-0 md:translate-y-4 md:scale-[0.98]"
+        >
+          <div
+            v-if="activeService"
+            class="relative flex h-dvh w-full flex-col overflow-hidden bg-surface-container-lowest shadow-depth md:h-auto md:max-h-[88vh] md:max-w-3xl md:rounded-[5px]"
+          >
+            <div class="relative min-h-[160px] overflow-hidden bg-primary md:min-h-[220px]">
+              <img
+                :src="activeService.image"
+                :alt="activeService.imageAlt"
+                class="absolute inset-0 h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/92 via-primary/58 to-primary/24"></div>
+              <button
+                type="button"
+                class="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-[5px] bg-white/90 text-primary shadow-card transition-colors hover:bg-white"
+                aria-label="Close service details"
+                @click="closeServiceDetails"
+              >
+                <span class="material-symbols-outlined">close</span>
+              </button>
+              <div class="absolute bottom-0 left-0 right-0 p-6">
+                <div class="mb-4 flex h-12 w-12 items-center justify-center bg-[#942b2d] text-white">
+                  <span class="material-symbols-outlined text-[26px]">{{ activeService.icon }}</span>
+                </div>
+                <h3
+                  :id="`service-modal-${activeService.title.replaceAll(' ', '-')}`"
+                  class="font-headline-md text-3xl font-bold text-white md:text-4xl"
+                >
+                  {{ activeService.title }}
+                </h3>
+              </div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto p-6 md:p-8">
+              <p class="font-body-md text-body-md leading-8 text-on-surface-variant">
+                {{ activeService.details }}
+              </p>
+
+              <a
+                :href="activeService.href"
+                class="mt-8 inline-flex min-h-12 w-full items-center justify-center rounded-[5px] bg-[#942b2d] px-6 text-center font-label-md text-label-md uppercase text-white transition-colors hover:bg-[#7f2426] md:w-auto"
+                @click="closeServiceDetails"
+              >
+                Contact FYK About This Service
+              </a>
+            </div>
+          </div>
+        </Transition>
+      </div>
+    </Teleport>
   </section>
 </template>

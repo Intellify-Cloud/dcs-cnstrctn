@@ -91,13 +91,15 @@ export const siteText = {
     ],
     cta: "Discuss Scope",
     ctaHref: "/contact",
-    itemCta: "Request Details",
+    itemCta: "More Info",
     items: [
       {
         icon: "route",
         title: "Civil Infrastructure",
         description:
           "Roads, highways, access roads, culverts, drainage systems, erosion control, dust control, dredging and earthworks.",
+        details:
+          "Strong civil infrastructure begins with accurate topographical surveys, earthworks, controlled drainage, and durable pavement construction, disciplines FYK Construction applies consistently across roads, culverts, stormwater channels, erosion protection, dredging, dust suppression, and ground improvement. Verified delivery includes rehabilitation at Gimi Earth Dam and the Azikoro-Onuebum-Otuoke road, executed under rigorous material testing, quality assurance, and coordinated plant sequencing for demanding public-sector requirements.",
         image: "/images/services/civil-infrastructure-africa-fyk.jpg",
         imageAlt: "Civil infrastructure works including roads and drainage.",
         href: "/contact",
@@ -107,6 +109,8 @@ export const siteText = {
         title: "Buildings & Facilities",
         description:
           "Institutional, commercial and residential construction, renovation, maintenance, furnishing and installation works.",
+        details:
+          "From substructure to final finishes, FYK Construction integrates structural, architectural, and building-services requirements into one fully coordinated delivery programme. Capability spans reinforced-concrete framing, masonry, roofing, fittings, fit-out, and external works. Reference projects include university study facilities, a 1,000-seat lecture theatre, institutional headquarters, gatehouses, and residential blocks, delivered through disciplined trade coordination, material control, and rigorous safety management assuring occupation-ready facilities.",
         image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Buildings and facilities construction works.",
         href: "/contact",
@@ -116,6 +120,8 @@ export const siteText = {
         title: "Water Infrastructure",
         description:
           "Water works, reticulation support, small-town water infrastructure and motorized solar-powered boreholes.",
+        details:
+          "Reliable water systems depend on coordinated abstraction, storage, pumping, and distribution networks, systems FYK Construction designs, constructs, and commissions for long-term reliability. Scope includes boreholes, solar-powered pumps, elevated tanks, pipe reticulation, valves, chambers, and foundations. Delivered works span a water scheme and overhead tower serving riverine communities in Rivers State, validated through hydraulic analysis, pressure testing, disinfection, and commissioning protocols.",
         image: "/images/services/water-infrastructure.jpg",
         imageAlt: "Water infrastructure project works.",
         href: "/contact",
@@ -125,6 +131,8 @@ export const siteText = {
         title: "Renovation & Remodeling",
         description:
           "Modernising infrastructure, facilities and properties with expert renovations that add lasting value.",
+        details:
+          "Restoring performance and asset value calls for a structured renovation programme grounded in condition surveys identifying defects, structural risk, moisture ingress, deteriorated finishes, and obsolete services - work sequenced by FYK Construction. Scope covers demolition, structural repair, finish replacement, services upgrading, furnishing, and reinstatement, with dust control, statutory inspection, and secured site access minimising disruption while delivering safer, durable spaces.",
         image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Renovation and remodeling works.",
         href: "/contact",
@@ -134,6 +142,8 @@ export const siteText = {
         title: "Construction & Engineering Consultancy",
         description:
           "Technical advisory, construction planning and engineering support for practical project delivery.",
+        details:
+          "Converting project objectives into buildable, cost-effective delivery strategies calls for sound technical advice - consultancy delivered by FYK Construction through site appraisal, scope definition, constructability review, quantity surveying, procurement strategy, programme scheduling, and formal risk analysis. Demonstrated capability across roads, culverts, water infrastructure, and buildings underpins evidence-based recommendations, while progress monitoring, technical inspection, reporting, and variation review strengthen client decision-making.",
         image: "/images/services/project-management.jpg",
         imageAlt: "Construction and engineering consultancy support.",
         href: "/contact",
@@ -143,6 +153,8 @@ export const siteText = {
         title: "Procurement & Installation",
         description:
           "Procurement, supply, delivery and installation of project equipment, materials and related systems.",
+        details:
+          "Correct technical specifications, reliable suppliers, controlled logistics, and verified installation practice come together in the procurement service FYK Construction manages end-to-end. Coverage includes quantity take-off, standards compliance, delivery scheduling, warranty administration, receiving inspection, storage, documentation, and acceptance testing. Reference assignments include lecture-theatre and institutional headquarters furnishing and vehicle supply, finalised through careful positioning, anchoring, connection, functional testing, and full commissioning.",
         image: "/images/services/procurement-and-installation.jpg",
         imageAlt: "Procurement and installation works.",
         href: "/contact",
@@ -152,6 +164,8 @@ export const siteText = {
         title: "M&E And Energy Works",
         description:
           "Mechanical, electrical and energy-related engineering support for building and infrastructure projects.",
+        details:
+          "Mechanical, electrical, and energy systems must be engineered for safety, functional performance, and operational efficiency across buildings and infrastructure, a mandate FYK Construction meets through coordinated electrical and mechanical works. Electrical scope spans distribution, cabling, lighting, earthing and protection, controls, and solar integration; mechanical scope covers pumping, drainage, ventilation, and plant installation, with testing, labelling, commissioning, and documentation strengthening reliability.",
         image: "/images/services/m-and-e-energy-works.jpg",
         imageAlt: "Mechanical, electrical and energy-related works.",
         href: "/contact",
@@ -161,6 +175,8 @@ export const siteText = {
         title: "Project Management",
         description:
           "Planning, coordination, supervision, reporting and delivery support from project inception through completion.",
+        details:
+          "FYK Construction anchors successful project delivery on clearly defined scope, realistic programming, disciplined coordination, and consistently transparent reporting. Services align clients, consultants, subcontractors, suppliers, labour, plant, inspections, approvals, and site access across roads, water infrastructure, buildings, furnishing, and supply assignments. Structured control of risk, variations, delay, cost, quality, safety, and environmental compliance carries projects through commissioning to orderly final handover.",
         image: "/images/services/project-management.jpg",
         imageAlt: "Project management and site coordination.",
         href: "/contact",
@@ -170,6 +186,8 @@ export const siteText = {
         title: "Architectural & Structural Design",
         description:
           "Integrated design and construction services that streamline project delivery and ensure cohesive execution.",
+        details:
+          "Balancing function, safety, buildability, durability, and efficient spatial planning is the foundation of every integrated design produced by FYK Construction, spanning architectural layouts, circulation, access, elevations, materials, and detailing alongside structural foundations, slabs, beams, columns, walls, and roof systems. Reference experience spans lecture theatres, institutional buildings, gatehouses, water towers, and residential blocks, supported by coordinated drawings, structural calculations, and specifications.",
         image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Architectural and structural design works.",
         href: "/contact",
@@ -385,10 +403,12 @@ export const siteText = {
       affiliations: ["COREN", "Nigerian Society of Engineers"],
     },
     featuredMember: {
-      name: "K. Adebayo",
-      role: "Project Leadership",
+      name: "Kunle Adebayo",
+      role: "Director, Business Growth & Strategic Partnerships",
       image: "/images/team/K-corporate-headshot-3.jpg",
-      imageAlt: "K. Adebayo of FYK Construction",
+      imageAlt: "Kunle Adebayo of FYK Construction",
+      summary:
+        "Built environment growth strategist driving construction, infrastructure, and development through key partnerships, local and international market expansion, joint ventures, and industry collaborations.",
     },
     members: [
       ["Surveyor Fashikun Samuel Adeniyi", "Registered Surveyor"],

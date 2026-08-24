@@ -11,7 +11,7 @@ const team = siteText.team;
   <section id="team" v-reveal class="relative bg-background py-20 md:py-[120px]">
     <div class="absolute top-0 left-0 right-0 h-px section-divider"></div>
 
-    <div class="mx-auto max-w-container-max px-margin-mobile sm:px-margin-large-mobile md:px-margin-tablet lg:px-margin-desktop">
+    <div class="mx-auto max-w-[1200px] px-margin-mobile sm:px-margin-large-mobile md:px-margin-tablet lg:px-margin-desktop">
       <div class="mb-12 grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
         <div>
           <div class="mb-5 flex items-center gap-3">
@@ -72,26 +72,26 @@ const team = siteText.team;
         </div>
       </div>
 
-      <div v-else class="grid gap-gutter lg:grid-cols-[0.8fr_1.2fr]">
-        <div class="grid gap-gutter">
-          <article class="overflow-hidden rounded-[5px] border border-outline-variant bg-primary text-white shadow-card">
+      <div v-else class="grid gap-gutter">
+        <div class="grid gap-gutter lg:grid-cols-2">
+          <article class="flex min-h-full flex-col overflow-hidden rounded-[5px] border border-outline-variant bg-primary text-white shadow-card">
             <img
               :src="team.leader.image"
               :alt="team.leader.imageAlt"
-              class="aspect-[4/3] w-full object-cover object-top"
+              class="aspect-[16/13] w-full object-cover object-top"
               loading="lazy"
             />
-            <div class="p-8">
+            <div class="flex flex-1 flex-col p-8">
               <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">
                 {{ team.leader.role }}
               </p>
               <h3 class="mt-4 font-headline-md text-3xl font-bold">
                 {{ team.leader.name }}
               </h3>
-              <p class="mt-5 font-body-md text-body-md leading-relaxed text-white/75">
+              <p class="mt-5 font-body-sm text-body-sm leading-relaxed text-white/75">
                 {{ team.leader.summary }}
               </p>
-              <div class="mt-6 flex flex-wrap gap-2">
+              <div class="mt-auto flex flex-wrap gap-2 pt-6">
                 <span
                   v-for="affiliation in team.leader.affiliations"
                   :key="affiliation"
@@ -103,25 +103,28 @@ const team = siteText.team;
             </div>
           </article>
 
-          <article class="overflow-hidden rounded-[5px] border border-outline-variant bg-surface-container-lowest shadow-card">
+          <article class="flex min-h-full flex-col overflow-hidden rounded-[5px] border border-outline-variant bg-primary text-white shadow-card">
             <img
               :src="team.featuredMember.image"
               :alt="team.featuredMember.imageAlt"
-              class="aspect-[4/3] w-full object-cover object-top"
+              class="aspect-[16/13] w-full object-cover object-top"
               loading="lazy"
             />
-            <div class="p-6">
-              <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-[#942b2d]">
+            <div class="flex flex-1 flex-col p-8">
+              <p class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">
                 {{ team.featuredMember.role }}
               </p>
-              <h3 class="mt-3 font-headline-md text-2xl font-bold text-primary">
+              <h3 class="mt-4 font-headline-md text-3xl font-bold">
                 {{ team.featuredMember.name }}
               </h3>
+              <p class="mt-5 font-body-sm text-body-sm leading-relaxed text-white/75">
+                {{ team.featuredMember.summary }}
+              </p>
             </div>
           </article>
         </div>
 
-        <div class="rounded-[5px] border border-outline-variant bg-surface-container-lowest shadow-card">
+        <div class="overflow-hidden rounded-[5px] border border-outline-variant bg-surface-container-lowest shadow-card">
           <div class="grid border-b border-outline-variant bg-surface-container-low px-5 py-4 font-label-md text-label-md uppercase tracking-[0.1em] text-primary sm:grid-cols-[1fr_1fr]">
             <span>Name</span>
             <span>Discipline / Qualification</span>
@@ -132,8 +135,8 @@ const team = siteText.team;
               :key="member[0]"
               class="grid gap-2 px-5 py-4 sm:grid-cols-[1fr_1fr]"
             >
-              <span class="font-body-md text-body-md font-semibold text-primary">{{ member[0] }}</span>
-              <span class="font-body-sm text-body-sm text-on-surface-variant">{{ member[1] }}</span>
+              <span class="font-body-sm text-body-sm font-semibold text-primary">{{ member[0] }}</span>
+              <span class="font-body-sm text-[13px] leading-5 text-on-surface-variant">{{ member[1] }}</span>
             </div>
           </div>
         </div>
