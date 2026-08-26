@@ -242,7 +242,7 @@ export const siteText = {
         title: "Kogi State University Entrepreneurship Study Centre (Phase 1)",
         location: "Anyigba, Kogi State",
         image:
-          "/images/projects/Kogi State University Entrepreneurship Study Centre (Phase 1).jpg",
+          "/images/projects/kogi-state-university-entrepreneurship-centre-phase-1.jpg",
         imageAlt: "Kogi State University Entrepreneurship Study Centre Phase 1.",
         metric: "Phase 1",
         description: "Kogi State University Entrepreneurship Study Centre.",
@@ -252,7 +252,7 @@ export const siteText = {
         title: "Kogi State University Entrepreneurship Study Centre (Phase 2)",
         location: "Anyigba, Kogi State",
         image:
-          "/images/projects/Kogi State University Entrepreneurship Study Centre (Phase 2).jpg",
+          "/images/projects/kogi-state-university-entrepreneurship-centre-phase-2.jpg",
         imageAlt: "Kogi State University Entrepreneurship Study Centre Phase 2.",
         metric: "Phase 2",
         description: "Kogi State University Entrepreneurship Study Centre.",
@@ -273,7 +273,7 @@ export const siteText = {
         title: "Furnishing Lecture Theatre, Federal University Wukari",
         location: "Wukari, Taraba State",
         image:
-          "/images/projects/Furnishing Lecture Theatre, Federal University, Wukari, Taraba State.jpg",
+          "/images/projects/federal-university-wukari-lecture-theatre-furnishing.jpg",
         imageAlt: "Furnished lecture theatre at Federal University Wukari.",
         metric: "Furnishing",
         description:
@@ -284,7 +284,7 @@ export const siteText = {
         title: "Nigeria Institute of Management Headquarters",
         location: "Garki, FCT Abuja",
         image:
-          "/images/projects/Construction and Furnishings of Nigeria Institute of Management Headquarters,Garki Abuja.jpg",
+          "/images/projects/nim-headquarters-garki-abuja.jpg",
         imageAlt: "Nigeria Institute of Management Headquarters in Garki Abuja.",
         metric: "Headquarters",
         description:
@@ -295,7 +295,7 @@ export const siteText = {
         title: "Fencing and Gate House, Abubakar Tafawa Balewa University",
         location: "Bauchi State",
         image:
-          "/images/projects/Construction of Fencing and Gate House, Abubakar Tafawa Balewa University, Bauchi..jpeg",
+          "/images/projects/atbu-bauchi-fencing-gate-house.jpeg",
         imageAlt: "Fencing and gate house at Abubakar Tafawa Balewa University Bauchi.",
         metric: "Gate house",
         description:
@@ -306,7 +306,7 @@ export const siteText = {
         title: "Riverine Communities Construction and Piping Works",
         location: "Riverine Communities, Rivers State",
         image:
-          "/images/projects/Construction and Piping of Riverine Communities in Rivers State for European Union Commission Water and Sanitation Scheme.jpg",
+          "/images/projects/rivers-state-riverine-communities-piping.jpg",
         imageAlt: "Construction and piping works in riverine communities in Rivers State.",
         metric: "Water scheme",
         description:
@@ -317,7 +317,7 @@ export const siteText = {
         title: "Overhead Water Tower for Communities in Rivers State",
         location: "Riverine Communities, Rivers State",
         image:
-          "/images/projects/Construction of Overhead Water Tower for Communities in Rivers State for European Union Commission Water and Sanitation Scheme.jpg",
+          "/images/projects/rivers-state-overhead-water-tower.jpg",
         imageAlt: "Overhead water tower for communities in Rivers State.",
         metric: "Water tower",
         description:

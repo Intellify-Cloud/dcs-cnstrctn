@@ -17,8 +17,7 @@ npm install
 echo "Building GitHub Pages site with base ${PAGES_BASE}..."
 DEPLOY_BASE="${PAGES_BASE}" npm run build
 
-echo "Adding SPA fallback for vue-router history mode..."
-cp dist/index.html dist/404.html
+echo "Using generated 404.html for unknown URLs..."
 
 echo "Publishing generated dist/ output to gh-pages..."
 npx gh-pages -d dist -b gh-pages

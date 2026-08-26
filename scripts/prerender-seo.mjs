@@ -201,3 +201,4 @@ await writeFile(path.join(distDir, "404.html"), prepareRouteHtml(template, seoDa
 
 await writeFile(path.join(distDir, "sitemap.xml"), sitemapXml());
 await writeFile(path.join(distDir, "robots.txt"), robotsTxt());
+await writeFile(path.join(distDir, ".gitattributes"), "* text=auto eol=lf\n*.png binary\n*.jpg binary\n*.jpeg binary\n*.ico binary\n*.mp4 binary\n");
