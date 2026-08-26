@@ -1,44 +1,26 @@
 import { watch } from "vue";
 import { useRoute } from "vue-router";
-import { siteText } from "../content/siteText";
+import seoData from "../content/seoData.json";
 
-const pageMeta: Record<string, { title: string; description: string }> = {
-  home: {
-    title: siteText.meta.title,
-    description: siteText.meta.description,
-  },
-  about: {
-    title: `${siteText.about.eyebrow} | ${siteText.brand.name}`,
-    description: siteText.about.body,
-  },
-  projects: {
-    title: `${siteText.pages.portfolio.title} | ${siteText.brand.name}`,
-    description: siteText.pages.portfolio.body,
-  },
-  team: {
-    title: `${siteText.team.eyebrow} | ${siteText.brand.name}`,
-    description: siteText.team.body,
-  },
-  quality: {
-    title: `${siteText.quality.eyebrow} | ${siteText.brand.name}`,
-    description: siteText.quality.body,
-  },
-  credentials: {
-    title: `${siteText.credentials.eyebrow} | ${siteText.brand.name}`,
-    description: siteText.credentials.body,
-  },
-  contact: {
-    title: `${siteText.pages.contact.title} | ${siteText.brand.name}`,
-    description: siteText.pages.contact.body,
-  },
-  privacy: {
-    title: `${siteText.pages.privacy.title} | ${siteText.brand.name}`,
-    description: siteText.pages.privacy.body,
-  },
-};
+const pageMeta = Object.fromEntries([
+  ...seoData.routes.map((route) => [route.name, route]),
+  [seoData.notFound.name, seoData.notFound],
+]);
+
+function getSiteUrl() {
+  return (import.meta.env.VITE_SITE_URL || seoData.siteUrl).replace(/\/+$/, "");
+}
+
+function getCanonicalUrl(path: string) {
+  return `${getSiteUrl()}${path === "/" ? "/" : path}`;
+}
 
 function setMetaDescription(content: string) {
   setMetaTag("name", "description", content);
+}
+
+function setRobotsMeta(noindex?: boolean) {
+  setMetaTag("name", "robots", noindex ? "noindex,follow" : "index,follow");
 }
 
 function setMetaTag(attribute: "name" | "property", key: string, content: string) {
@@ -51,31 +33,46 @@ function setMetaTag(attribute: "name" | "property", key: string, content: string
   tag.setAttribute("content", content);
 }
 
-function setSocialMeta(title: string, description: string) {
-  const image = new URL(siteText.social.image, window.location.origin).toString();
+function setLinkTag(rel: string, href: string) {
+  let tag = document.querySelector(`link[rel="${rel}"]`);
+  if (!tag) {
+    tag = document.createElement("link");
+    tag.setAttribute("rel", rel);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute("href", href);
+}
 
-  setMetaTag("property", "og:type", siteText.social.type);
+function setSocialMeta(title: string, description: string, canonicalUrl: string) {
+  const image = new URL(seoData.socialImage, getSiteUrl()).toString();
+
+  setMetaTag("property", "og:type", "website");
+  setMetaTag("property", "og:site_name", seoData.siteName);
   setMetaTag("property", "og:title", title);
   setMetaTag("property", "og:description", description);
+  setMetaTag("property", "og:url", canonicalUrl);
   setMetaTag("property", "og:image", image);
-  setMetaTag("property", "og:image:alt", siteText.social.imageAlt);
+  setMetaTag("property", "og:image:alt", seoData.socialImageAlt);
   setMetaTag("name", "twitter:card", "summary_large_image");
   setMetaTag("name", "twitter:title", title);
   setMetaTag("name", "twitter:description", description);
   setMetaTag("name", "twitter:image", image);
-  setMetaTag("name", "twitter:image:alt", siteText.social.imageAlt);
+  setMetaTag("name", "twitter:image:alt", seoData.socialImageAlt);
 }
 
 export function useSeoHead() {
   const route = useRoute();
 
   watch(
-    () => route.name,
-    (name) => {
-      const meta = pageMeta[String(name)] ?? pageMeta.home;
+    () => route.fullPath,
+    () => {
+      const meta = pageMeta[String(route.name)] ?? pageMeta.home;
+      const canonicalUrl = getCanonicalUrl(meta.path);
       document.title = meta.title;
       setMetaDescription(meta.description);
-      setSocialMeta(meta.title, meta.description);
+      setRobotsMeta(meta.noindex);
+      setLinkTag("canonical", canonicalUrl);
+      setSocialMeta(meta.title, meta.description, canonicalUrl);
     },
     { immediate: true }
   );

@@ -2,7 +2,7 @@
 import SmartLink from "../SmartLink.vue";
 import { siteText } from "../../content/siteText";
 
-defineProps<{ compact?: boolean }>();
+defineProps<{ compact?: boolean; asPage?: boolean }>();
 
 const team = siteText.team;
 </script>
@@ -20,9 +20,12 @@ const team = siteText.team;
               {{ team.eyebrow }}
             </span>
           </div>
-          <h2 class="font-headline-lg text-headline-lg-mobile uppercase text-primary md:text-headline-lg accent-line">
+          <component
+            :is="asPage ? 'h1' : 'h2'"
+            class="font-headline-lg text-headline-lg-mobile uppercase text-primary md:text-headline-lg accent-line"
+          >
             {{ compact ? team.compactHeading : team.heading }}
-          </h2>
+          </component>
         </div>
         <p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
           {{ compact ? team.compactBody : team.body }}
@@ -34,6 +37,8 @@ const team = siteText.team;
           <img
             :src="team.leader.image"
             :alt="team.leader.imageAlt"
+            :width="team.leader.imageWidth"
+            :height="team.leader.imageHeight"
             class="aspect-[4/3] w-full object-cover object-top"
             loading="lazy"
           />
@@ -78,6 +83,8 @@ const team = siteText.team;
             <img
               :src="team.leader.image"
               :alt="team.leader.imageAlt"
+              :width="team.leader.imageWidth"
+              :height="team.leader.imageHeight"
               class="aspect-[16/13] w-full object-cover object-top"
               loading="lazy"
             />
@@ -107,6 +114,8 @@ const team = siteText.team;
             <img
               :src="team.featuredMember.image"
               :alt="team.featuredMember.imageAlt"
+              :width="team.featuredMember.imageWidth"
+              :height="team.featuredMember.imageHeight"
               class="aspect-[16/13] w-full object-cover object-top"
               loading="lazy"
             />

@@ -1,0 +1,131 @@
+{
+  "siteUrl": "https://fykconstructions.com",
+  "siteName": "FYK Construction Nigeria Limited",
+  "socialImage": "/images/social/social.jpg",
+  "socialImageAlt": "FYK Construction brand preview image",
+  "organization": {
+    "name": "FYK Construction Nigeria Limited",
+    "alternateName": "FYK Construction",
+    "email": "info@fykconstructions.com",
+    "telephone": "+234 803 311 9890",
+    "address": "House 65, Road 22, Kado Estate, Abuja",
+    "areaServed": "Nigeria"
+  },
+  "verification": {
+    "google": "",
+    "bing": ""
+  },
+  "indexNowKey": "2304e4cd-2341-49f5-8385-3a50030e06ba",
+  "services": [
+    "Civil Infrastructure",
+    "Buildings & Facilities",
+    "Water Infrastructure",
+    "Renovation & Remodeling",
+    "Construction & Engineering Consultancy",
+    "Procurement & Installation",
+    "M&E And Energy Works",
+    "Project Management",
+    "Architectural & Structural Design"
+  ],
+  "projects": [
+    "Kogi State University Entrepreneurship Study Centre, Anyigba, Kogi State",
+    "1000 Seat Lecture Theatre, Federal University Wukari, Taraba State",
+    "Nigeria Institute of Management Headquarters, Garki Abuja",
+    "Fencing and Gate House, Abubakar Tafawa Balewa University, Bauchi",
+    "Riverine Communities Construction and Piping Works, Rivers State",
+    "Overhead Water Tower for Communities in Rivers State"
+  ],
+  "faq": [
+    {
+      "question": "How does FYK manage health and safety?",
+      "answer": "FYK's profile states a commitment to preventing injury to workers, subcontractors and third parties. Its safety approach emphasizes clear controls for high-risk areas, appropriate safety materials and protection of people, property and equipment."
+    },
+    {
+      "question": "What is FYK's approach to the environment?",
+      "answer": "The company profile commits to minimizing environmental effects at construction sites and preserving natural environments where possible. It also describes reinstating or stabilizing affected areas when disturbance cannot be avoided."
+    },
+    {
+      "question": "How does FYK engage host communities?",
+      "answer": "FYK's stated approach is to work in harmony with host communities, support constructive local relationships and engage community residents in suitable work opportunities."
+    },
+    {
+      "question": "What is FYK's quality commitment?",
+      "answer": "FYK pursues sound planning, disciplined supervision and quality-focused delivery so that completed works perform reliably for clients and communities."
+    }
+  ],
+  "notFound": {
+    "name": "not-found",
+    "path": "/404",
+    "title": "Page Not Found | FYK Construction Nigeria Limited",
+    "description": "The requested page could not be found. Return to FYK Construction services, projects or contact information.",
+    "heading": "Page Not Found",
+    "summary": "The page you requested could not be found. Use the links below to return to FYK Construction's main construction, project and contact pages.",
+    "noindex": true
+  },
+  "routes": [
+    {
+      "name": "home",
+      "path": "/",
+      "title": "FYK Construction Nigeria Limited | Engineering & Construction",
+      "description": "FYK Construction Nigeria Limited delivers civil engineering, building, road, water, energy and project-management solutions across Nigeria.",
+      "heading": "Building Nigeria's Infrastructure With Technical Depth",
+      "summary": "FYK Construction Nigeria Limited delivers multidisciplinary engineering and construction solutions for public institutions, agencies, communities and private-sector clients across Nigeria."
+    },
+    {
+      "name": "about",
+      "path": "/about",
+      "title": "About FYK Construction | Engineering Contractor in Nigeria",
+      "description": "Learn about FYK Construction Nigeria Limited, an engineering and construction company delivering civil works, buildings, infrastructure and project support across Nigeria.",
+      "heading": "About FYK Construction",
+      "summary": "FYK Construction Nigeria Limited operates across civil works, buildings, infrastructure, water, energy-related works, procurement and project management."
+    },
+    {
+      "name": "services",
+      "path": "/services",
+      "title": "Construction and Engineering Services in Nigeria | FYK Construction",
+      "description": "Explore FYK Construction services including civil infrastructure, buildings, water systems, renovations, procurement, M&E works and project management across Nigeria.",
+      "heading": "Construction and Engineering Services",
+      "summary": "FYK Construction delivers integrated construction, engineering, renovation and maintenance services for public institutions, agencies, communities, commercial organisations and private-sector clients."
+    },
+    {
+      "name": "projects",
+      "path": "/projects",
+      "title": "Construction Project Portfolio in Nigeria | FYK Construction",
+      "description": "Review selected FYK Construction projects across roads, buildings, water infrastructure, institutional facilities, maintenance and procurement in Nigeria.",
+      "heading": "Project Portfolio",
+      "summary": "FYK's supplied profile records delivery across roads, buildings, water infrastructure, institutional facilities, maintenance and procurement."
+    },
+    {
+      "name": "team",
+      "path": "/team",
+      "title": "Construction Team and Professional Capacity | FYK Construction",
+      "description": "Meet FYK Construction's multidisciplinary team across civil, mechanical and electrical engineering, architecture, surveying, quantity surveying and support functions.",
+      "heading": "Multidisciplinary Professional Capacity",
+      "summary": "FYK's profile presents a multidisciplinary team spanning civil, mechanical and electrical engineering, architecture, surveying, quantity surveying, human resources and legal support."
+    },
+    {
+      "name": "quality",
+      "path": "/quality",
+      "title": "SHEQ, CSR and Construction Compliance | FYK Construction",
+      "description": "Read about FYK Construction's safety, health, environmental, quality and community commitments for responsible project delivery across Nigeria.",
+      "heading": "Safety, Health, Environmental, And Quality",
+      "summary": "FYK Construction's delivery commitments cover health and safety, environmental care, community partnership, local content and skills development."
+    },
+    {
+      "name": "contact",
+      "path": "/contact",
+      "title": "Contact FYK Construction in Nigeria | Request a Consultation",
+      "description": "Contact FYK Construction Nigeria Limited to discuss building, infrastructure, water, energy, procurement or project-management requirements.",
+      "heading": "Contact FYK",
+      "summary": "Send a project enquiry, tender question or partnership request to FYK Construction Nigeria Limited."
+    },
+    {
+      "name": "privacy",
+      "path": "/privacy",
+      "title": "Privacy Policy | FYK Construction Nigeria Limited",
+      "description": "Read how FYK Construction Nigeria Limited handles information submitted through the website.",
+      "heading": "Privacy Policy",
+      "summary": "This page explains how FYK Construction Nigeria Limited collects, uses and protects information submitted through the website."
+    }
+  ]
+}

@@ -15,7 +15,7 @@ interface ProjectCard {
 const activeProject = ref<string | null>(null);
 
 function getClient(details: string[]) {
-  return details.find((detail) => detail.toLowerCase().startsWith("client:"))?.replace(/^client:\s*/i, "") ?? "To be confirmed";
+  return details.find((detail) => detail.toLowerCase().startsWith("client:"))?.replace(/^client:\s*/i, "") ?? "Client details available on request";
 }
 
 function shuffledCards(cards: ProjectCard[]) {
@@ -158,7 +158,7 @@ function showNextRegister() {
     </div>
 
     <p class="mt-10 max-w-3xl font-body-sm text-body-sm text-on-surface-variant">
-      Project photographs will be updated as approved images become available.
+      Selected images and project summaries highlight the range of FYK's construction and infrastructure delivery.
     </p>
 
     <div class="mt-16 border-t border-outline-variant pt-12">

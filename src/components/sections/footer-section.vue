@@ -16,6 +16,8 @@ import { siteText } from "../../content/siteText";
           <img
             :src="siteText.brand.logo"
             :alt="siteText.brand.logoAlt"
+            width="1536"
+            height="633"
             class="h-24 w-auto max-w-[220px] object-contain"
           />
         </div>
@@ -33,7 +35,7 @@ import { siteText } from "../../content/siteText";
           <SmartLink
             v-for="service in siteText.footer.services"
             :key="service"
-            link="/#services"
+            link="/services"
             class="font-body-sm text-body-sm text-white/60 transition-colors hover:text-secondary"
           >
             {{ service }}

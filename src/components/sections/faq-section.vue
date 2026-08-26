@@ -16,8 +16,17 @@ const toggle = (index: number) => {
 // (the app doesn't install unhead).
 let ldScript: HTMLScriptElement | null = null;
 onMounted(() => {
+  const existingFaqSchema = [...document.querySelectorAll('script[type="application/ld+json"]')].some(
+    (script) => script.textContent?.includes('"FAQPage"'),
+  );
+
+  if (existingFaqSchema) {
+    return;
+  }
+
   ldScript = document.createElement("script");
   ldScript.type = "application/ld+json";
+  ldScript.dataset.schema = "faq";
   ldScript.textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "FAQPage",

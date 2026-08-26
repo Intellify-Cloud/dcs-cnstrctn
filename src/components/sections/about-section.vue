@@ -24,9 +24,9 @@ const about = siteText.about;
             <span class="inline-block h-[1px] w-6 bg-secondary"></span>
             <span class="font-label-md text-label-md uppercase tracking-[0.15em] text-secondary">{{ about.eyebrow }}</span>
           </div>
-          <h2 class="about-page-title font-headline-lg text-headline-lg-mobile uppercase text-white md:text-headline-lg">
+          <h1 class="about-page-title font-headline-lg text-headline-lg-mobile uppercase text-white md:text-headline-lg">
             {{ about.heading }}
-          </h2>
+          </h1>
           <p class="mt-12 max-w-[28rem] font-label-lg text-[15px] font-semibold uppercase leading-[22px] tracking-[0.12em] text-white/85 md:mt-16">
             {{ about.highlight }}
           </p>

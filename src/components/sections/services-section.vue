@@ -2,6 +2,8 @@
 import { computed, onBeforeUnmount, ref, watch } from "vue";
 import { siteText } from "../../content/siteText";
 
+defineProps<{ asPage?: boolean }>();
+
 const services = siteText.services.items;
 const activeServiceTitle = ref<string | null>(null);
 
@@ -51,9 +53,12 @@ onBeforeUnmount(() => {
               {{ siteText.services.eyebrow }}
             </span>
           </div>
-          <h2 class="font-headline-lg text-headline-lg-mobile uppercase text-primary md:text-headline-lg accent-line">
+          <component
+            :is="asPage ? 'h1' : 'h2'"
+            class="font-headline-lg text-headline-lg-mobile uppercase text-primary md:text-headline-lg accent-line"
+          >
             {{ siteText.services.heading }}
-          </h2>
+          </component>
           <div class="mt-5 grid max-w-3xl gap-4">
             <p
               v-for="paragraph in siteText.services.body"
@@ -87,6 +92,8 @@ onBeforeUnmount(() => {
           <img
             :src="service.image"
             :alt="service.imageAlt"
+            :width="service.imageWidth"
+            :height="service.imageHeight"
             class="absolute inset-0 h-full w-full object-cover"
             loading="lazy"
           />
@@ -186,6 +193,8 @@ onBeforeUnmount(() => {
               <img
                 :src="activeService.image"
                 :alt="activeService.imageAlt"
+                :width="activeService.imageWidth"
+                :height="activeService.imageHeight"
                 class="absolute inset-0 h-full w-full object-cover"
               />
               <div class="absolute inset-0 bg-gradient-to-t from-primary/92 via-primary/58 to-primary/24"></div>

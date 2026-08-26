@@ -214,9 +214,9 @@ if ($type === 'newsletter') {
         fail_response(400, 'Please complete the required fields.');
     }
 
-    if (stripos($subject, 'Home loan expert callback') !== false) {
-        $sourceLabel = 'Apply now form';
-        $mailSubject = 'Apply Now | FYK Construction Website';
+    if (stripos($subject, 'Project consultation') !== false || stripos($subject, 'Discuss a project') !== false) {
+        $sourceLabel = 'Project consultation form';
+        $mailSubject = 'Project Consultation | FYK Construction Website';
     } else {
         $sourceLabel = 'Contact form';
         $mailSubject = 'Contact Form | FYK Construction Website';

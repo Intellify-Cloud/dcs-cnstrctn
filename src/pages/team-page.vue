@@ -3,5 +3,5 @@ import TeamSection from "../components/sections/team-section.vue";
 </script>
 
 <template>
-  <TeamSection />
+  <TeamSection as-page />
 </template>

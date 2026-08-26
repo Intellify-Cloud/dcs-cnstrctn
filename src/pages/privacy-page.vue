@@ -16,10 +16,19 @@ import { siteText } from "../content/siteText";
     <p class="mb-6 font-body-lg text-body-lg leading-relaxed text-on-surface-variant">
       {{ siteText.pages.privacy.body }}
     </p>
-    <div class="rounded-[5px] border border-outline-variant bg-surface-container-lowest p-6 shadow-card">
-      <p class="font-body-md text-body-md leading-relaxed text-on-surface-variant">
-        {{ siteText.pages.privacy.note }}
-      </p>
+    <div class="grid gap-5">
+      <article
+        v-for="section in siteText.pages.privacy.sections"
+        :key="section.heading"
+        class="rounded-[5px] border border-outline-variant bg-surface-container-lowest p-6 shadow-card"
+      >
+        <h2 class="font-headline-md text-2xl font-bold text-primary">
+          {{ section.heading }}
+        </h2>
+        <p class="mt-3 font-body-md text-body-md leading-relaxed text-on-surface-variant">
+          {{ section.body }}
+        </p>
+      </article>
     </div>
   </section>
 </template>

@@ -16,9 +16,9 @@ const quality = siteText.quality;
             {{ quality.eyebrow }}
           </span>
         </div>
-        <h2 class="font-headline-lg text-headline-lg-mobile uppercase text-primary md:text-headline-lg accent-line">
+        <h1 class="font-headline-lg text-headline-lg-mobile uppercase text-primary md:text-headline-lg accent-line">
           {{ quality.heading }}
-        </h2>
+        </h1>
         <p class="mt-5 font-body-md text-body-md leading-relaxed text-on-surface-variant">
           {{ quality.body }}
         </p>

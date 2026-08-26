@@ -8,10 +8,13 @@ const isSubmitting = ref(false);
 const submitMessage = ref("");
 const submitStatus = ref<"idle" | "success" | "error">("idle");
 const enquiry = reactive({
+  type: "contact",
+  subject: "Project consultation",
   name: "",
   email: "",
   phone: "",
   location: "",
+  service: "",
   message: "",
   website: "",
 });
@@ -46,6 +49,7 @@ async function handleSubmit() {
     enquiry.email = "";
     enquiry.phone = "";
     enquiry.location = "";
+    enquiry.service = "";
     enquiry.message = "";
     enquiry.website = "";
   } catch (error) {
@@ -79,12 +83,46 @@ async function handleSubmit() {
       </p>
 
       <form class="grid gap-5 md:grid-cols-2" @submit.prevent="handleSubmit">
-        <input v-model="enquiry.name" required type="text" :placeholder="form.namePlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 text-body-md shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
-        <input v-model="enquiry.email" required type="email" :placeholder="form.emailPlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 text-body-md shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
-        <input v-model="enquiry.phone" type="tel" :placeholder="form.phonePlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 text-body-md shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
-        <input v-model="enquiry.location" type="text" :placeholder="form.locationPlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 text-body-md shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
-        <textarea v-model="enquiry.message" required :placeholder="form.messagePlaceholder" rows="4" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 text-body-md shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover md:col-span-2"></textarea>
+        <input v-model="enquiry.type" type="hidden" name="type" />
+        <input v-model="enquiry.subject" type="hidden" name="subject" />
+        <label class="grid gap-2 font-label-md text-label-md uppercase tracking-[0.1em] text-primary">
+          {{ form.nameLabel }}
+          <input v-model="enquiry.name" required type="text" :placeholder="form.namePlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 font-body-md text-body-md normal-case tracking-normal shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
+        </label>
+        <label class="grid gap-2 font-label-md text-label-md uppercase tracking-[0.1em] text-primary">
+          {{ form.emailLabel }}
+          <input v-model="enquiry.email" required type="email" :placeholder="form.emailPlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 font-body-md text-body-md normal-case tracking-normal shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
+        </label>
+        <label class="grid gap-2 font-label-md text-label-md uppercase tracking-[0.1em] text-primary">
+          {{ form.phoneLabel }}
+          <input v-model="enquiry.phone" type="tel" :placeholder="form.phonePlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 font-body-md text-body-md normal-case tracking-normal shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
+        </label>
+        <label class="grid gap-2 font-label-md text-label-md uppercase tracking-[0.1em] text-primary">
+          {{ form.locationLabel }}
+          <input v-model="enquiry.location" type="text" :placeholder="form.locationPlaceholder" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 font-body-md text-body-md normal-case tracking-normal shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover" />
+        </label>
+        <label class="grid gap-2 font-label-md text-label-md uppercase tracking-[0.1em] text-primary md:col-span-2">
+          {{ form.serviceLabel }}
+          <select v-model="enquiry.service" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 font-body-md text-body-md normal-case tracking-normal shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover">
+            <option value="">{{ form.servicePlaceholder }}</option>
+            <option
+              v-for="service in siteText.services.items"
+              :key="service.title"
+              :value="service.title"
+            >
+              {{ service.title }}
+            </option>
+          </select>
+        </label>
+        <label class="grid gap-2 font-label-md text-label-md uppercase tracking-[0.1em] text-primary md:col-span-2">
+          {{ form.messageLabel }}
+          <textarea v-model="enquiry.message" required :placeholder="form.messagePlaceholder" rows="5" class="border border-outline-variant/50 bg-surface-container-lowest px-4 py-3 font-body-md text-body-md normal-case tracking-normal shadow-card outline-none transition-all focus:border-secondary focus:shadow-card-hover"></textarea>
+        </label>
         <input v-model="enquiry.website" type="text" name="website" autocomplete="off" tabindex="-1" class="hidden" aria-hidden="true" />
+        <div class="grid gap-2 font-body-sm text-body-sm leading-relaxed text-on-surface-variant md:col-span-2">
+          <p>{{ form.responseNote }}</p>
+          <p>{{ form.privacyNote }}</p>
+        </div>
         <button type="submit" :disabled="isSubmitting" class="group relative inline-flex min-h-12 items-center justify-center overflow-hidden rounded-[5px] bg-[#942b2d] px-8 font-label-md text-label-md uppercase text-white transition-colors hover:bg-[#7f2426] hover:text-white disabled:cursor-not-allowed disabled:opacity-60 md:col-span-2 md:w-fit">
           <span class="relative z-10 flex items-center gap-2">
             {{ isSubmitting ? "Sending..." : form.submit }}

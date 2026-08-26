@@ -5,8 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "vue-tsc -b && vite build && node scripts/prerender-seo.mjs",
+    "preview": "vite preview",
+    "seo:validate": "npm run build && node scripts/validate-seo.mjs",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@tailwindcss/container-queries": "^0.1.1",

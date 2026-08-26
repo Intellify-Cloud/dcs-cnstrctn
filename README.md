@@ -1,7 +1,7 @@
-# DCS Construction
+# FYK Construction Nigeria Limited
 
-Vue 3 + Vite + TypeScript website for DCS Construction, an industrial and
-commercial construction brand.
+Vue 3 + Vite + TypeScript website for FYK Construction Nigeria Limited, an
+engineering and construction company serving clients across Nigeria.
 
 ## Quick Start
 
@@ -9,11 +9,30 @@ commercial construction brand.
 npm install
 npm run dev
 npm run build
+npm run seo:validate
 ```
 
-## Branch Model
+## SEO Build
 
-- `main`: editable source code, content, public assets, and configuration.
-- `gh-pages`: generated static website output published from `dist/`.
+`npm run build` runs the Vite production build and then generates route-specific
+HTML for SEO metadata, canonical URLs, structured data, `robots.txt`,
+`sitemap.xml`, and `404.html`.
 
-Run `bash deploy.sh` to build and publish the generated site to GitHub Pages.
+Use `npm run seo:validate` before deployment to check core SEO files, route
+metadata and referenced static assets.
+
+## Search Console, Bing and IndexNow
+
+Production domain: `https://fykconstructions.com`
+
+Add verified Google Search Console and Bing Webmaster Tools tokens to
+`src/content/seoData.json` when available. Empty values are ignored by the
+SEO generator.
+
+The public IndexNow key is available at
+`/2304e4cd-2341-49f5-8385-3a50030e06ba.txt`. After deployment, changed URLs can
+be submitted to IndexNow with:
+
+```bash
+npm run indexnow:submit
+```

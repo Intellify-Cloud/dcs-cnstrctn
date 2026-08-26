@@ -102,6 +102,8 @@ export const siteText = {
           "Strong civil infrastructure begins with accurate topographical surveys, earthworks, controlled drainage, and durable pavement construction, disciplines FYK Construction applies consistently across roads, culverts, stormwater channels, erosion protection, dredging, dust suppression, and ground improvement. Verified delivery includes rehabilitation at Gimi Earth Dam and the Azikoro-Onuebum-Otuoke road, executed under rigorous material testing, quality assurance, and coordinated plant sequencing for demanding public-sector requirements.",
         image: "/images/services/civil-infrastructure-africa-fyk.jpg",
         imageAlt: "Civil infrastructure works including roads and drainage.",
+        imageWidth: 1366,
+        imageHeight: 768,
         href: "/contact",
       },
       {
@@ -113,6 +115,8 @@ export const siteText = {
           "From substructure to final finishes, FYK Construction integrates structural, architectural, and building-services requirements into one fully coordinated delivery programme. Capability spans reinforced-concrete framing, masonry, roofing, fittings, fit-out, and external works. Reference projects include university study facilities, a 1,000-seat lecture theatre, institutional headquarters, gatehouses, and residential blocks, delivered through disciplined trade coordination, material control, and rigorous safety management assuring occupation-ready facilities.",
         image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Buildings and facilities construction works.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
       {
@@ -124,6 +128,8 @@ export const siteText = {
           "Reliable water systems depend on coordinated abstraction, storage, pumping, and distribution networks, systems FYK Construction designs, constructs, and commissions for long-term reliability. Scope includes boreholes, solar-powered pumps, elevated tanks, pipe reticulation, valves, chambers, and foundations. Delivered works span a water scheme and overhead tower serving riverine communities in Rivers State, validated through hydraulic analysis, pressure testing, disinfection, and commissioning protocols.",
         image: "/images/services/water-infrastructure.jpg",
         imageAlt: "Water infrastructure project works.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
       {
@@ -135,6 +141,8 @@ export const siteText = {
           "Restoring performance and asset value calls for a structured renovation programme grounded in condition surveys identifying defects, structural risk, moisture ingress, deteriorated finishes, and obsolete services - work sequenced by FYK Construction. Scope covers demolition, structural repair, finish replacement, services upgrading, furnishing, and reinstatement, with dust control, statutory inspection, and secured site access minimising disruption while delivering safer, durable spaces.",
         image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Renovation and remodeling works.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
       {
@@ -146,6 +154,8 @@ export const siteText = {
           "Converting project objectives into buildable, cost-effective delivery strategies calls for sound technical advice - consultancy delivered by FYK Construction through site appraisal, scope definition, constructability review, quantity surveying, procurement strategy, programme scheduling, and formal risk analysis. Demonstrated capability across roads, culverts, water infrastructure, and buildings underpins evidence-based recommendations, while progress monitoring, technical inspection, reporting, and variation review strengthen client decision-making.",
         image: "/images/services/project-management.jpg",
         imageAlt: "Construction and engineering consultancy support.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
       {
@@ -157,6 +167,8 @@ export const siteText = {
           "Correct technical specifications, reliable suppliers, controlled logistics, and verified installation practice come together in the procurement service FYK Construction manages end-to-end. Coverage includes quantity take-off, standards compliance, delivery scheduling, warranty administration, receiving inspection, storage, documentation, and acceptance testing. Reference assignments include lecture-theatre and institutional headquarters furnishing and vehicle supply, finalised through careful positioning, anchoring, connection, functional testing, and full commissioning.",
         image: "/images/services/procurement-and-installation.jpg",
         imageAlt: "Procurement and installation works.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
       {
@@ -168,6 +180,8 @@ export const siteText = {
           "Mechanical, electrical, and energy systems must be engineered for safety, functional performance, and operational efficiency across buildings and infrastructure, a mandate FYK Construction meets through coordinated electrical and mechanical works. Electrical scope spans distribution, cabling, lighting, earthing and protection, controls, and solar integration; mechanical scope covers pumping, drainage, ventilation, and plant installation, with testing, labelling, commissioning, and documentation strengthening reliability.",
         image: "/images/services/m-and-e-energy-works.jpg",
         imageAlt: "Mechanical, electrical and energy-related works.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
       {
@@ -179,6 +193,8 @@ export const siteText = {
           "FYK Construction anchors successful project delivery on clearly defined scope, realistic programming, disciplined coordination, and consistently transparent reporting. Services align clients, consultants, subcontractors, suppliers, labour, plant, inspections, approvals, and site access across roads, water infrastructure, buildings, furnishing, and supply assignments. Structured control of risk, variations, delay, cost, quality, safety, and environmental compliance carries projects through commissioning to orderly final handover.",
         image: "/images/services/project-management.jpg",
         imageAlt: "Project management and site coordination.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
       {
@@ -190,6 +206,8 @@ export const siteText = {
           "Balancing function, safety, buildability, durability, and efficient spatial planning is the foundation of every integrated design produced by FYK Construction, spanning architectural layouts, circulation, access, elevations, materials, and detailing alongside structural foundations, slabs, beams, columns, walls, and roof systems. Reference experience spans lecture theatres, institutional buildings, gatehouses, water towers, and residential blocks, supported by coordinated drawings, structural calculations, and specifications.",
         image: "/images/services/buildings-and-facilities.jpg",
         imageAlt: "Architectural and structural design works.",
+        imageWidth: 889,
+        imageHeight: 500,
         href: "/contact",
       },
     ],
@@ -209,10 +227,10 @@ export const siteText = {
   },
   projects: {
     eyebrow: "Projects",
-    heading: "Portfolio Starting Points For Public Review",
-    body: "FYK's supplied profile records delivery across roads, buildings, water infrastructure, institutional facilities, maintenance and procurement. These projects are suitable starting points once client approval, status and photography are confirmed.",
+    heading: "Selected Construction Projects",
+    body: "FYK's project record spans roads, buildings, water infrastructure, institutional facilities, maintenance and procurement for public institutions, agencies and communities across Nigeria.",
     pageNote:
-      "Scope and status were transcribed from the supplied profile and should be reconfirmed before publication.",
+      "Project scopes are summarised from FYK's company profile and related project records.",
     registerHeading: "Extended Project Register",
     registerColumns: ["Project", "Client / Location"],
     previousLabel: "Previous projects",
@@ -398,6 +416,8 @@ export const siteText = {
       role: "Chief Executive Officer",
       image: "/images/team/BAdebayo_2.jpg",
       imageAlt: "Engr. Adebisi Adebayo, Chief Executive Officer of FYK Construction",
+      imageWidth: 1254,
+      imageHeight: 1254,
       summary:
         "Civil engineer and construction-management professional with recorded experience in engineering design, project supervision, infrastructure planning and capital-project monitoring.",
       affiliations: ["COREN", "Nigerian Society of Engineers"],
@@ -407,6 +427,8 @@ export const siteText = {
       role: "Director, Business Growth & Strategic Partnerships",
       image: "/images/team/K-corporate-headshot-3.jpg",
       imageAlt: "Kunle Adebayo of FYK Construction",
+      imageWidth: 800,
+      imageHeight: 873,
       summary:
         "Built environment growth strategist driving construction, infrastructure, and development through key partnerships, local and international market expansion, joint ventures, and industry collaborations.",
     },
@@ -429,7 +451,7 @@ export const siteText = {
     close:
       "Our people bring complementary technical knowledge to each assignment, from early planning and cost control to construction supervision, commissioning and handover.",
     note:
-      "Confirm each person's current role, consent, biography and professional-registration status before naming them on the website.",
+      "Team information is presented from FYK's company profile and professional capacity records.",
   },
   quality: {
     eyebrow: "SHEQ & CSR",
@@ -475,16 +497,16 @@ export const siteText = {
   credentials: {
     eyebrow: "Compliance",
     heading: "Certified, Compliant and Accredited",
-    body: "The supplied profile includes corporate records, professional capacity details and historical compliance documents. Current credentials should be verified before public badge or certificate claims are displayed.",
+    body: "FYK Construction Nigeria Limited presents corporate records, professional capacity details and compliance documentation for due-diligence review by clients and partners.",
     points: [
       "Compliance and Industry Accreditations",
       "Professional capacity across civil, mechanical and electrical engineering, architecture, surveying and quantity surveying",
-      "Historical compliance records covering pension, ITF, NSITF, FRC, SCUML, contractor membership, tax and financial records",
+      "Compliance records covering pension, ITF, NSITF, FRC, SCUML, contractor membership, tax and financial records",
     ],
     publishable:
       "FYK Construction Nigeria Limited maintains the corporate and professional capacity required for its areas of operation. Supporting records are available for due-diligence review on request.",
     note:
-      "Do not display compliance badges, certificate numbers, expiry dates or claims of current certification until FYK supplies current, legible documents and authorizes their use.",
+      "Detailed compliance documents are available for appropriate client and partner due-diligence review.",
   },
   contact: {
     eyebrow: "Contact",
@@ -501,7 +523,7 @@ export const siteText = {
       ["Plateau office", "49 Dakang Road, Kuru, Jos"],
     ],
     note:
-      "Confirm which offices are active, the preferred telephone number, official email address, operating hours and map locations before launch.",
+      "FYK receives project enquiries through its published telephone number, email address and office contact details.",
   },
   whatsapp: {
     phone: "2348033119890",
@@ -536,21 +558,65 @@ export const siteText = {
     contact: {
       eyebrow: "Contact",
       title: "Contact FYK",
-      body: "Send a project enquiry, tender question or partnership request. Confirmed contact details should replace placeholders before launch.",
+      body: "Send a project enquiry, tender question or partnership request to FYK Construction Nigeria Limited.",
       form: {
-        namePlaceholder: "Name",
-        emailPlaceholder: "Email address",
-        phonePlaceholder: "Phone number",
-        locationPlaceholder: "Project location",
-        messagePlaceholder: "How can we help?",
+        nameLabel: "Name",
+        namePlaceholder: "Your name",
+        emailLabel: "Email address",
+        emailPlaceholder: "you@example.com",
+        phoneLabel: "Phone number",
+        phonePlaceholder: "+234...",
+        locationLabel: "Project location",
+        locationPlaceholder: "City or state",
+        serviceLabel: "Service required",
+        servicePlaceholder: "Select a service",
+        messageLabel: "Project details",
+        messagePlaceholder: "Tell us about the project scope, timeline or tender requirement.",
         submit: "Submit Enquiry",
+        responseNote:
+          "FYK will use these details to respond to your enquiry and may follow up by email or phone.",
+        privacyNote:
+          "Do not include passwords, access codes or sensitive financial information in this form.",
       },
     },
     privacy: {
       eyebrow: "Privacy",
       title: "Privacy Policy",
       body: "How FYK Construction Nigeria Limited collects, uses and protects information submitted through the website.",
-      note: "This page is a placeholder. Replace it with the company's full privacy policy before launch.",
+      sections: [
+        {
+          heading: "Information We Collect",
+          body:
+            "When you contact FYK through this website, we may collect your name, email address, phone number, project location and enquiry details so that we can respond to your request.",
+        },
+        {
+          heading: "How We Use Information",
+          body:
+            "We use submitted information to respond to enquiries, understand project requirements, arrange follow-up communication and maintain appropriate business records.",
+        },
+        {
+          heading: "Information Sharing",
+          body:
+            "Where needed to respond to a project enquiry, information may be shared with relevant FYK personnel, consultants, subcontractors or suppliers involved in evaluating the request.",
+        },
+        {
+          heading: "Contact",
+          body:
+            "Questions about website privacy can be sent to info@fykconstructions.com.",
+        },
+      ],
+    },
+    notFound: {
+      eyebrow: "404",
+      title: "Page Not Found",
+      body:
+        "The page you requested could not be found. Use the links below to return to FYK Construction's main construction, project and contact pages.",
+      links: [
+        { label: "Home", link: "/" },
+        { label: "Services", link: "/services" },
+        { label: "Projects", link: "/projects" },
+        { label: "Contact", link: "/contact" },
+      ],
     },
   },
   steps: {
