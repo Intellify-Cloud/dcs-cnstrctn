@@ -18,32 +18,16 @@ function getClient(details: string[]) {
   return details.find((detail) => detail.toLowerCase().startsWith("client:"))?.replace(/^client:\s*/i, "") ?? "Client details available on request";
 }
 
-function shuffledCards(cards: ProjectCard[]) {
-  const shuffled = [...cards];
-
-  for (let index = shuffled.length - 1; index > 0; index -= 1) {
-    const randomIndex = Math.floor(Math.random() * (index + 1));
-    [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
-  }
-
-  return shuffled;
-}
-
-const selectedProjectCards = ref(
-  shuffledCards(
-    siteText.projects.items.map((project, index) => ({
-      id: `featured-${index}`,
-      title: project.title,
-      client: getClient(project.details),
-      location: project.location,
-      scope: project.description,
-      image: project.image,
-      imageAlt: project.imageAlt,
-    })),
-  ).slice(0, 6),
-);
-
-const projectCards = computed<ProjectCard[]>(() => selectedProjectCards.value);
+// Shown in content order as a 3 x 3 grid on desktop.
+const projectCards: ProjectCard[] = siteText.projects.items.slice(0, 9).map((project, index) => ({
+  id: `featured-${index}`,
+  title: project.title,
+  client: getClient(project.details),
+  location: project.location,
+  scope: project.description,
+  image: project.image,
+  imageAlt: project.imageAlt,
+}));
 
 const registerCards = computed(() => siteText.projects.register.slice(0, 6));
 const registerStartIndex = ref(0);
@@ -156,10 +140,6 @@ function showNextRegister() {
         </button>
       </article>
     </div>
-
-    <p class="mt-10 max-w-3xl font-body-sm text-body-sm text-on-surface-variant">
-      Selected images and project summaries highlight the range of FYK's construction and infrastructure delivery.
-    </p>
 
     <div class="mt-16 border-t border-outline-variant pt-12">
       <div class="mb-8 flex items-end justify-between gap-6">

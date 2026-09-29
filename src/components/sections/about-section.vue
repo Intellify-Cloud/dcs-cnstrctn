@@ -27,7 +27,7 @@ const about = siteText.about;
           <h1 class="about-page-title font-headline-lg text-headline-lg-mobile uppercase text-white md:text-headline-lg">
             {{ about.heading }}
           </h1>
-          <p class="mt-12 max-w-[28rem] font-label-lg text-[15px] font-semibold uppercase leading-[22px] tracking-[0.12em] text-white/85 md:mt-16">
+          <p class="mt-12 max-w-[28rem] font-label-lg text-[35px] font-extralight uppercase leading-[1.15] tracking-[0.12em] text-white/85 md:mt-16">
             {{ about.highlight }}
           </p>
         </div>
@@ -93,7 +93,7 @@ const about = siteText.about;
 @media (min-width: 768px) {
   .about-page-title.md\:text-headline-lg {
     font-size: 35px;
-    line-height: 1.2;
+    line-height: 35px;
     letter-spacing: -0.01em;
     font-weight: 700;
   }

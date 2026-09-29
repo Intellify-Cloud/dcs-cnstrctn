@@ -239,6 +239,24 @@ export const siteText = {
     allHref: "/projects",
     items: [
       {
+        title: "Durumi Asphaltic Road",
+        location: "Durumi, FCT, Abuja",
+        image: "/images/projects/durumi-asphal-road.png",
+        imageAlt: "Durumi asphaltic road construction in FCT Abuja.",
+        metric: "0.7 km",
+        description: "Construction of 0.7 km asphaltic road at Durumi, FCT Abuja.",
+        details: ["Client: Federal Ministry of Agriculture and Rural Development"],
+      },
+      {
+        title: "Rehabilitation of Matale and Erinpa Community Farm Road",
+        location: "Matale and Erinpa Community, Plateau State",
+        image: "/images/projects/rehabilitation-of-matale-and-erinpa-community-farm-road.jpg",
+        imageAlt: "Rehabilitation of Matale and Erinpa community farm road in Plateau State.",
+        metric: "1.5 km",
+        description: "Rehabilitation of 1.5 km farm road and drainage at Matale and Erinpa Community, Plateau State.",
+        details: ["Client: Federal College of Veterinary & Medical Laboratory Technology, National Veterinary Research Institute, Vom"],
+      },
+      {
         title: "Kogi State University Entrepreneurship Study Centre (Phase 1)",
         location: "Anyigba, Kogi State",
         image:
@@ -249,6 +267,17 @@ export const siteText = {
         details: ["Client: Kogi State University"],
       },
       {
+        title: "Overhead Water Tower for Communities in Rivers State",
+        location: "Riverine Communities, Rivers State",
+        image:
+          "/images/projects/rivers-state-overhead-water-tower.jpg",
+        imageAlt: "Overhead water tower for communities in Rivers State.",
+        metric: "Water tower",
+        description:
+          "Construction of overhead water tower for communities in Rivers State for European Union Commission Water and Sanitation Scheme.",
+        details: ["Client: European Union Commission"],
+      },
+      {
         title: "Kogi State University Entrepreneurship Study Centre (Phase 2)",
         location: "Anyigba, Kogi State",
         image:
@@ -257,28 +286,6 @@ export const siteText = {
         metric: "Phase 2",
         description: "Kogi State University Entrepreneurship Study Centre.",
         details: ["Client: Kogi State University"],
-      },
-      {
-        title: "1000 Seat Lecture Theatre, Federal University Wukari",
-        location: "Wukari, Taraba State",
-        image:
-          "/images/projects/1000-seater-lecture-theatre-federal-university-wukari-taraba-state-01.jpg",
-        imageAlt: "1000 seat lecture theatre at Federal University Wukari.",
-        metric: "1000 seats",
-        description:
-          "Construction of 1000 Seat Lecture Theatre, Federal University, Wukari, Taraba State.",
-        details: ["Client: Federal University, Wukari"],
-      },
-      {
-        title: "Furnishing Lecture Theatre, Federal University Wukari",
-        location: "Wukari, Taraba State",
-        image:
-          "/images/projects/federal-university-wukari-lecture-theatre-furnishing.jpg",
-        imageAlt: "Furnished lecture theatre at Federal University Wukari.",
-        metric: "Furnishing",
-        description:
-          "Furnishing of the 1000 Seat Lecture Theatre, Federal University, Wukari, Taraba State.",
-        details: ["Client: Federal University, Wukari"],
       },
       {
         title: "Nigeria Institute of Management Headquarters",
@@ -292,15 +299,15 @@ export const siteText = {
         details: ["Client: Nigeria Institute of Management Headquarters, Garki Abuja"],
       },
       {
-        title: "Fencing and Gate House, Abubakar Tafawa Balewa University",
-        location: "Bauchi State",
+        title: "Furnishing Lecture Theatre, Federal University Wukari",
+        location: "Wukari, Taraba State",
         image:
-          "/images/projects/atbu-bauchi-fencing-gate-house.jpeg",
-        imageAlt: "Fencing and gate house at Abubakar Tafawa Balewa University Bauchi.",
-        metric: "Gate house",
+          "/images/projects/federal-university-wukari-lecture-theatre-furnishing.jpg",
+        imageAlt: "Furnished lecture theatre at Federal University Wukari.",
+        metric: "Furnishing",
         description:
-          "Construction of fencing and gate house, Abubakar Tafawa Balewa University, Bauchi.",
-        details: ["Client: Abubakar Tafawa Balewa University, Bauchi"],
+          "Furnishing of the 1000 Seat Lecture Theatre, Federal University, Wukari, Taraba State.",
+        details: ["Client: Federal University, Wukari"],
       },
       {
         title: "Riverine Communities Construction and Piping Works",
@@ -314,15 +321,15 @@ export const siteText = {
         details: ["Client: European Union Commission"],
       },
       {
-        title: "Overhead Water Tower for Communities in Rivers State",
-        location: "Riverine Communities, Rivers State",
+        title: "1000 Seat Lecture Theatre, Federal University Wukari",
+        location: "Wukari, Taraba State",
         image:
-          "/images/projects/rivers-state-overhead-water-tower.jpg",
-        imageAlt: "Overhead water tower for communities in Rivers State.",
-        metric: "Water tower",
+          "/images/projects/1000-seater-lecture-theatre-federal-university-wukari-taraba-state-01.jpg",
+        imageAlt: "1000 seat lecture theatre at Federal University Wukari.",
+        metric: "1000 seats",
         description:
-          "Construction of overhead water tower for communities in Rivers State for European Union Commission Water and Sanitation Scheme.",
-        details: ["Client: European Union Commission"],
+          "Construction of 1000 Seat Lecture Theatre, Federal University, Wukari, Taraba State.",
+        details: ["Client: Federal University, Wukari"],
       },
     ],
     register: [
